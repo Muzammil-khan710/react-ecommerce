@@ -1,0 +1,46 @@
+.homepage-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.explore-btn {
+    color: var(--color-dark-blue);
+    background-color: var(--color-grey);
+    font-size: 1.2rem;
+    height: 3rem;
+    width: 20rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.section-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 60%;
+}
+
+.section-text {
+    color: var(--color-background);
+    font-size: 3rem;
+}
+
+.featured-p-img {
+    border-radius: 50%;
+    height: 8rem;
+}
+
+.featured-p-container, .featured-product-type {
+    display: flex;
+    gap: 5rem;  
+    flex-wrap: wrap;
+}
+
+.products-link:hover {
+    background-color: var(--color-grey);
+    font-weight: 600;
+}
