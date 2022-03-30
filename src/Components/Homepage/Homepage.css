@@ -42,4 +42,5 @@
 
 .products-link:hover {
     background-color: var(--color-grey);
+    font-weight: 600;
 }

@@ -2,6 +2,6 @@
 
 .App {
   text-align: center;
+  background-color: var(--color-grey);
 }
-
 
