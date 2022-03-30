@@ -1,6 +1,7 @@
 import React from 'react'
-import { HomeImg } from '../../images/ImageExp'
+import { AnalogWatch, AutomaticWatch, ChronographWatch, HomeImg, SmartWatch } from '../../images/ImageExp'
 import './Homepage.css'
+import { FeaturedProducts } from './FeaturedProducts'
 
 const Homepage = () => {
   return (
@@ -9,6 +10,15 @@ const Homepage = () => {
         <section className='section-area'>
             <h2 className='section-text'>Exclusive offer upto 50% off</h2>
             <button className='explore-btn'>Explore all categories</button>
+        </section>
+        <h1>Available Categories</h1>
+        <section className='category-container'>
+        <div className="featured-product-type">
+          <FeaturedProducts src={AutomaticWatch} title="AutomaticWatch" />
+          <FeaturedProducts src={AnalogWatch} title="AnalogWatch" />
+          <FeaturedProducts src={ChronographWatch} title="ChronographWatch" />
+          <FeaturedProducts src={SmartWatch} title="SmartWatch" />
+        </div>
         </section>
     </div>
   )
