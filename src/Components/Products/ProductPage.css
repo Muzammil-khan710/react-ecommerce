@@ -1,9 +1,7 @@
 .card-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
-  align-items: center;
-  justify-content: center;
+  gap: 3rem;
   padding: 2rem;
 }
 
@@ -32,3 +30,11 @@
   gap: 1rem;
 }
 
+.checkbox-container {
+  display: flex;
+  align-items: flex-start;
+  width: 10rem;
+  flex-direction: column;
+  margin: 10px;
+  gap: 1rem;
+}

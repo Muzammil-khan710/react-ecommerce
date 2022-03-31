@@ -11,6 +11,23 @@ const ProductsPage = () => {
     <h2>All products</h2>
     <div className='product-page-content'>
 
+        <div className="left-container">
+          <h2>Filters</h2>
+
+          <div className="checkbox-container">
+            <span><input className="checkbox" type="checkbox" />Price: High to low </span>
+            <span><input className="checkbox" type="checkbox" />Price: Low to high</span>
+            <span><input className="checkbox" type="checkbox" /> Rating</span>
+         
+
+          <h3>by category</h3>
+            <span><input className='radio' type="radio" name="" id="" />Analog</span>
+            <span><input type="radio" name="" id="" />Smart</span>
+            <span><input type="radio" name="" id="" />Automatic</span>
+            <span><input type="radio" name="" id="" />Chronograph</span>
+            </div>
+        </div>
+
         <div className="card-container">
           {data.map((item) => {
             const {
