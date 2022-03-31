@@ -2,6 +2,7 @@ import React from 'react'
 import { AnalogWatch, AutomaticWatch, ChronographWatch, HomeImg, SmartWatch } from '../../images/ImageExp'
 import './Homepage.css'
 import { FeaturedProducts } from './FeaturedProducts'
+import { Link } from 'react-router-dom'
 
 const Homepage = () => {
   return (
@@ -9,7 +10,7 @@ const Homepage = () => {
         <img style={{height:"auto",width:"100%"}} src={HomeImg} alt="" />
         <section className='section-area'>
             <h2 className='section-text'>Exclusive offer upto 50% off</h2>
-            <button className='explore-btn'>Explore all categories</button>
+            <Link to="/products"><button className='explore-btn'>Explore all categories</button></Link>
         </section>
         <h1>Available Categories</h1>
         <section className='category-container'>
