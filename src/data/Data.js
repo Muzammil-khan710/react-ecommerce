@@ -1,0 +1,147 @@
+import { ArmaniAnalogWatch, ArmaniChronoWatch, BovetAutomaticWatch, CasioChronoWatch, HrxSmartWatch, MiSmartWatch, OnePlusSmartWatch, RadoAnalogWatch, RiderAnalogWatch, SeikoAutomaticWatch} from "../images/ImageExp"
+
+
+const data = [
+  {
+    id: 0,
+    name: "Casio Chronograph Watch",
+    originalPrice: 15000,
+    hasOffer: true,
+    hasDiscount: true,
+    discountPrice: 9000,
+    badgeMessage: "40% off",
+    imageSrc: CasioChronoWatch,
+    inStock: true,
+    fastDelivery: true,
+    categoryName: "T-shirt",
+    rating: 4.5
+  },
+  {
+    id: 1,
+    name: "Armani Chronograph watch",
+    originalPrice: 20000,
+    hasOffer: true,
+    hasDiscount: true,
+    discountPrice: 15000,
+    badgeMessage: "30% off",
+    imageSrc: ArmaniChronoWatch,
+    inStock: true,
+    fastDelivery: true,
+    categoryName: "T-shirt",
+    rating: 4.5
+  },
+  {
+    id: 2,
+    name: "Mi band 5",
+    originalPrice: 6500,
+    hasOffer: true,
+    hasDiscount: true,
+    discountPrice: 4500,
+    badgeMessage: "30% off",
+    imageSrc: MiSmartWatch,
+    inStock: true,
+    fastDelivery: true,
+    categoryName: "T-shirt",
+    rating: 4.5
+  },
+  {
+    id: 3,
+    name: "HRX smart watch ",
+    originalPrice: 7000,
+    hasOffer: true,
+    hasDiscount: true,
+    discountPrice: 5900,
+    badgeMessage: "30% off",
+    imageSrc: HrxSmartWatch,
+    inStock: true,
+    fastDelivery: true,
+    categoryName: "T-shirt",
+    rating: 4.5
+  },
+  {
+    id: 4,
+    name: "Oneplus smart watch",
+    originalPrice: 20000,
+    hasOffer: true,
+    hasDiscount: true,
+    discountPrice: 18000,
+    badgeMessage: "30% off",
+    imageSrc: OnePlusSmartWatch,
+    inStock: true,
+    fastDelivery: true,
+    categoryName: "T-shirt",
+    rating: 4.5
+  },
+  {
+    id: 5,
+    name: "Rider analog watch",
+    originalPrice: 25000,
+    hasOffer: true,
+    hasDiscount: true,
+    discountPrice: 19900,
+    badgeMessage: "40% off",
+    imageSrc: RiderAnalogWatch,
+    inStock: true,
+    fastDelivery: true,
+    categoryName: "T-shirt",
+    rating: 4.5
+  },
+  {
+    id: 6,
+    name: "Armani analog watch",
+    originalPrice: 30000,
+    hasOffer: true,
+    hasDiscount: true,
+    discountPrice: 15000,
+    badgeMessage: "50% off",
+    imageSrc: ArmaniAnalogWatch,
+    inStock: true,
+    fastDelivery: true,
+    categoryName: "T-shirt",
+    rating: 4.5
+  },
+  {
+    id: 7,
+    name: "Rado analog watch",
+    originalPrice: 40000,
+    hasOffer: true,
+    hasDiscount: true,
+    discountPrice: 30000,
+    badgeMessage: "20% off",
+    imageSrc: RadoAnalogWatch,
+    inStock: true,
+    fastDelivery: true,
+    categoryName: "T-shirt",
+    rating: 4.5
+  },
+  {
+    id: 8,
+    name: "Bovet automatic watch",
+    originalPrice: 45000,
+    hasOffer: true,
+    hasDiscount: true,
+    discountPrice: 40000,
+    badgeMessage: "15% off",
+    imageSrc: BovetAutomaticWatch,
+    inStock: true,
+    fastDelivery: true,
+    categoryName: "T-shirt",
+    rating: 4.5
+  },
+  {
+    id: 9,
+    name: "Seiko automatic watch",
+    originalPrice: 35000,
+    hasOffer: true,
+    hasDiscount: true,
+    discountPrice: 20000,
+    badgeMessage: "25% off",
+    imageSrc: SeikoAutomaticWatch,
+    inStock: true,
+    fastDelivery: true,
+    categoryName: "T-shirt",
+    rating: 4.5
+  }
+]
+
+export { data }
