@@ -13,8 +13,8 @@ const data = [
     imageSrc: CasioChronoWatch,
     inStock: true,
     fastDelivery: true,
-    categoryName: "T-shirt",
-    rating: 4.5
+    categoryName: "Chronograph",
+    rating: 4.8
   },
   {
     id: 1,
@@ -27,8 +27,8 @@ const data = [
     imageSrc: ArmaniChronoWatch,
     inStock: true,
     fastDelivery: true,
-    categoryName: "T-shirt",
-    rating: 4.5
+    categoryName: "Chronograph",
+    rating: 3.1
   },
   {
     id: 2,
@@ -41,8 +41,8 @@ const data = [
     imageSrc: MiSmartWatch,
     inStock: true,
     fastDelivery: true,
-    categoryName: "T-shirt",
-    rating: 4.5
+    categoryName: "Smart watch",
+    rating: 5.0
   },
   {
     id: 3,
@@ -55,8 +55,8 @@ const data = [
     imageSrc: HrxSmartWatch,
     inStock: true,
     fastDelivery: true,
-    categoryName: "T-shirt",
-    rating: 4.5
+    categoryName: "Smart watch",
+    rating: 3.9
   },
   {
     id: 4,
@@ -69,8 +69,8 @@ const data = [
     imageSrc: OnePlusSmartWatch,
     inStock: true,
     fastDelivery: true,
-    categoryName: "T-shirt",
-    rating: 4.5
+    categoryName: "Smart watch",
+    rating: 4.0
   },
   {
     id: 5,
@@ -83,8 +83,8 @@ const data = [
     imageSrc: RiderAnalogWatch,
     inStock: true,
     fastDelivery: true,
-    categoryName: "T-shirt",
-    rating: 4.5
+    categoryName: "Analog",
+    rating: 2.5
   },
   {
     id: 6,
@@ -97,8 +97,8 @@ const data = [
     imageSrc: ArmaniAnalogWatch,
     inStock: true,
     fastDelivery: true,
-    categoryName: "T-shirt",
-    rating: 4.5
+    categoryName: "Analog",
+    rating: 3.0
   },
   {
     id: 7,
@@ -111,8 +111,8 @@ const data = [
     imageSrc: RadoAnalogWatch,
     inStock: true,
     fastDelivery: true,
-    categoryName: "T-shirt",
-    rating: 4.5
+    categoryName: "Analog",
+    rating: 4.6
   },
   {
     id: 8,
@@ -125,8 +125,8 @@ const data = [
     imageSrc: BovetAutomaticWatch,
     inStock: true,
     fastDelivery: true,
-    categoryName: "T-shirt",
-    rating: 4.5
+    categoryName: "Analog",
+    rating: 4.9
   },
   {
     id: 9,
@@ -139,8 +139,8 @@ const data = [
     imageSrc: SeikoAutomaticWatch,
     inStock: true,
     fastDelivery: true,
-    categoryName: "T-shirt",
-    rating: 4.5
+    categoryName: "Analog",
+    rating: 4.0
   }
 ]
 
