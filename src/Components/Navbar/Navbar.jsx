@@ -20,7 +20,6 @@ const Navbar = () => {
           <UserProfile onClick={() => setShow(prev => !prev)}/>
           {show &&
           <div className='user-profile-cont' >
-           <li><Link className='link-product' to="/products">Logout</Link></li>
            <li><Link className='link-product' to="/Login">Login</Link></li>
            <li><Link className='link-product' to="/Signup">Signup</Link></li>
           </div>
