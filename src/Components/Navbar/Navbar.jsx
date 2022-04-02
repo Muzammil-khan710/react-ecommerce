@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ShoppingCartIcon, UserProfile, WishlistIcon } from '../../images/Svg'
 import './Navbar.css'
 
 const Navbar = () => {
+
+  const [show, setShow] = useState(false);
+
   return (
     <div className='nav-content'>
       <Link className='brand-name link' to="/">MyWatch</Link>
@@ -12,7 +15,16 @@ const Navbar = () => {
          <Link className='link-product'to='/products'>Products</Link>
          <ShoppingCartIcon/>
          <WishlistIcon/>
-         <UserProfile/>
+         {/* <UserProfile/> */}
+         <div>
+          <UserProfile onClick={() => setShow(prev => !prev)}/>
+          {show &&
+          <div className='user-profile-cont' >
+           <li><Link className='link-product' to="/Login">Login</Link></li>
+           <li><Link className='link-product' to="/Signup">Signup</Link></li>
+          </div>
+          } 
+    </div>
        </div>
     </div>
   )

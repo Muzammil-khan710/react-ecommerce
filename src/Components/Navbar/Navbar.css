@@ -35,3 +35,10 @@
     text-decoration: none;
     padding: 1rem;
 }
+
+.user-profile-cont {
+    position: absolute;
+    right: 5px;
+    list-style: none;
+    background-color: var(--color-dark-blue);
+}
