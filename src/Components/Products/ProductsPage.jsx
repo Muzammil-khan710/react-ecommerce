@@ -3,9 +3,15 @@ import "./ProductPage.css";
 
 import React from 'react'
 import { IcBaselineStar } from '../../images/Svg';
+import { useCart } from '../../context/Cart-context';
 
 const ProductsPage = () => {
   
+  const { state: {cart}, dispatch } =  useCart()
+
+
+  console.log(cart)
+
   return (
     <>
     <h2>All products</h2>
@@ -65,12 +71,46 @@ const ProductsPage = () => {
                   </p>
 
                   <div className="crd-btn">
-                    <button className="btn green">
+
+                     
+                          <button className="btn red" onClick={() => {
+                            dispatch({
+                              type: "REMOVE_FROM_CART",
+                              payload: item.id,
+                            })
+                            console.log("clicked")
+
+                          }}>
+                            Remove from Cart
+                          </button>
+                      
+                          <button className="btn green" onClick={() => {
+                            dispatch({
+                              type: "ADD_TO_CART",
+                              payload: item,
+                            });
+                          }}>
+                            Add to cart 
+                          </button>
+                        
+
+                    {/* <button className="btn green" onClick={() => {
+                      dispatch({
+                        type: "ADD_TO_CART",
+                        payload: item
+                      })
+                    }}>
                       Add to cart
                     </button>
-                    <button className="btn red">
+                    <button className="btn red" onClick={() => {
+                      dispatch({
+                        type: "REMOVE_FROM_CART",
+                        paylaod: item
+                      })
+                    }}>
                       Move to Wishlist
-                    </button>
+                    </button> */}
+
                   </div>
                 </div>
               </div>

@@ -42,3 +42,7 @@
     list-style: none;
     background-color: var(--color-dark-blue);
 }
+
+.cart-bdg {
+    width: 1.5rem;
+}

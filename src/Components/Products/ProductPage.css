@@ -38,3 +38,7 @@
   margin: 10px;
   gap: 1rem;
 }
+
+img {
+  object-fit: cover;
+}
