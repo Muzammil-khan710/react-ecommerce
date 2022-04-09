@@ -27,10 +27,10 @@ const ProductsPage = () => {
          
 
           <h3>by category</h3>
-            <span><input className='radio' type="radio" name="" id="" />Analog</span>
-            <span><input type="radio" name="" id="" />Smart</span>
-            <span><input type="radio" name="" id="" />Automatic</span>
-            <span><input type="radio" name="" id="" />Chronograph</span>
+            <span><input className='radio' type="radio"  />Analog</span>
+            <span><input type="radio"  />Smart</span>
+            <span><input type="radio"  />Automatic</span>
+            <span><input type="radio"  />Chronograph</span>
             </div>
         </div>
 
