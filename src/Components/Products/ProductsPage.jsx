@@ -71,46 +71,25 @@ const ProductsPage = () => {
                   </p>
 
                   <div className="crd-btn">
-
                      
-                          <button className="btn red" onClick={() => {
-                            dispatch({
-                              type: "REMOVE_FROM_CART",
-                              payload: item.id,
-                            })
-                            console.log("clicked")
-
-                          }}>
-                            Remove from Cart
-                          </button>
-                      
-                          <button className="btn green" onClick={() => {
-                            dispatch({
-                              type: "ADD_TO_CART",
-                              payload: item,
-                            });
-                          }}>
-                            Add to cart 
-                          </button>
-                        
-
-                    {/* <button className="btn green" onClick={() => {
-                      dispatch({
-                        type: "ADD_TO_CART",
-                        payload: item
-                      })
-                    }}>
-                      Add to cart
-                    </button>
                     <button className="btn red" onClick={() => {
                       dispatch({
                         type: "REMOVE_FROM_CART",
-                        paylaod: item
+                        payload: item.id,
                       })
                     }}>
-                      Move to Wishlist
-                    </button> */}
-
+                      Remove from Cart
+                    </button>
+                
+                    <button className="btn green" onClick={() => {
+                      dispatch({
+                        type: "ADD_TO_CART",
+                        payload: item,
+                      });
+                    }}>
+                      Add to cart 
+                    </button>
+ 
                   </div>
                 </div>
               </div>
