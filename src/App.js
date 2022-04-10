@@ -1,10 +1,7 @@
 import "./App.css";
-import { Footer, Navbar, Homepage } from "./Components/Allcomps";
+import { Footer, Navbar, Homepage, LoginPage, SignupPage, CartPage } from "./Components/Allcomps";
 import { ProductsPage } from "./Components/Products/ProductsPage";
 import { Routes, Route } from "react-router-dom"
-import { LoginPage } from "./Components/Login/Login";
-import { SignupPage } from "./Components/Signup/Signup";
-import { CartPage } from "./Components/Cart/CartPage";
 
 function App() {
   return (
