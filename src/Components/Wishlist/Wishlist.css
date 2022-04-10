@@ -1,0 +1,5 @@
+.spc-ar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

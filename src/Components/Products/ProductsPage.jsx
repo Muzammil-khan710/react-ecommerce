@@ -4,10 +4,13 @@ import "./ProductPage.css";
 import React from 'react'
 import { IcBaselineStar } from '../../images/Svg';
 import { useCart } from '../../context/Cart-context';
+import { useWishlist } from '../../context/Wishlist-context';
 
 const ProductsPage = () => {
   
-  const { dispatch } =  useCart()
+  const { state: {cart}, dispatch } =  useCart()
+
+  const { stateWishlist : {wishlist},  dispatchWishlist } = useWishlist();
 
   return (
     <>
@@ -68,7 +71,7 @@ const ProductsPage = () => {
                   </p>
 
                   <div className="crd-btn">
-                     
+                     {cart.find((d) => d.id === item.id) ? (
                     <button className="btn red" onClick={() => {
                       dispatch({
                         type: "REMOVE_FROM_CART",
@@ -77,7 +80,7 @@ const ProductsPage = () => {
                     }}>
                       Remove from Cart
                     </button>
-                
+                     ) : (
                     <button className="btn green" onClick={() => {
                       dispatch({
                         type: "ADD_TO_CART",
@@ -86,8 +89,34 @@ const ProductsPage = () => {
                     }}>
                       Add to cart 
                     </button>
- 
+                    ) 
+                  }
                   </div>
+
+                  <div className="crd-btn">
+                     {wishlist.find((n) => n.id === item.id) ? (
+                    <button className="btn outline-red" onClick={() => {
+                      dispatchWishlist({
+                        type: "REMOVE_FROM_WISHLIST",
+                        payload: item.id,
+                      })
+                    }}>
+                      Remove from Wishlist
+                    </button>
+                     ) : (
+                    <button className="btn outline-green" onClick={() => {
+                      dispatchWishlist({
+                        type: "ADD_TO_WISHLIST",
+                        payload: item,
+                      });
+                    }}>
+                      Add to Wishlist
+                    </button>
+                    ) 
+                  }
+                  </div>
+
+
                 </div>
               </div>
             );

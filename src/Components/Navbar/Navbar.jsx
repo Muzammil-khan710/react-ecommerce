@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useCart } from '../../context/Cart-context'
+import { useWishlist } from '../../context/Wishlist-context'
 import { ShoppingCartIcon, UserProfile, WishlistIcon } from '../../images/Svg'
 import './Navbar.css'
 
@@ -8,7 +9,9 @@ const Navbar = () => {
 
   const [show, setShow] = useState(false);
 
-  const { state: {cart}} =  useCart()
+  const { state: {cart}} =  useCart();
+
+  const { stateWishlist : {wishlist} } = useWishlist();
 
   return (
     <div className='nav-content'>
@@ -17,16 +20,16 @@ const Navbar = () => {
        <div className='icon-container'>
          <Link className='link-product'to='/products'>Products</Link>
          <Link className='link-product' to="/cart"> <ShoppingCartIcon/>{ cart.length > 0 && <span className='bdg cart-bdg red'>{cart.length}  </span> } </Link>       
-         <WishlistIcon />
+         <Link className='link-product' to="/wishlist"> <WishlistIcon/>{ wishlist.length > 0 && <span className='bdg cart-bdg red'>{wishlist.length}  </span> }  </Link>
          <div>
-          <UserProfile onClick={() => setShow(prev => !prev)}/>
+          <UserProfile className='profile' onClick={() => setShow(prev => !prev)}/>
           {show &&
           <div className='user-profile-cont' >
            <li><Link className='link-product' to="/Login">Login</Link></li>
            <li><Link className='link-product' to="/Signup">Signup</Link></li>
           </div>
           } 
-    </div>
+         </div>
        </div>
     </div>
   )

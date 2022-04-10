@@ -1,5 +1,5 @@
 import "./App.css";
-import { Footer, Navbar, Homepage, LoginPage, SignupPage, CartPage } from "./Components/Allcomps";
+import { Footer, Navbar, Homepage, LoginPage, SignupPage, CartPage, WishlistPage } from "./Components/Allcomps";
 import { ProductsPage } from "./Components/Products/ProductsPage";
 import { Routes, Route } from "react-router-dom"
 
@@ -13,6 +13,7 @@ function App() {
         <Route path="/Login" element={<LoginPage/>} />
         <Route path="/Signup" element={<SignupPage/>} />
         <Route path="/cart" element={<CartPage/>} />
+        <Route path="/wishlist" element={<WishlistPage/>} />
       </Routes>
       <Footer />
     </div>
