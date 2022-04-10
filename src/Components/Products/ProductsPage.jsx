@@ -9,9 +9,6 @@ const ProductsPage = () => {
   
   const { state: {cart}, dispatch } =  useCart()
 
-
-  console.log(cart)
-
   return (
     <>
     <h2>All products</h2>
