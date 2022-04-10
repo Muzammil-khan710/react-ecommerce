@@ -7,7 +7,7 @@ import { useCart } from '../../context/Cart-context';
 
 const ProductsPage = () => {
   
-  const { state: {cart}, dispatch } =  useCart()
+  const { dispatch } =  useCart()
 
   return (
     <>
