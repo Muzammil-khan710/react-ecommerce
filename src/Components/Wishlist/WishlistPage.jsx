@@ -5,13 +5,9 @@ import "./Wishlist.css"
 
 const WishlistPage = () => {
 
-    // const { state: {cart} } = useCart();    
     const { stateWishlist: {wishlist}, dispatchWishlist } = useWishlist();
     
     const { dispatch } = useCart();
-
-    console.log("wishlist", wishlist);
-    // console.log("from wishlist", cart);
 
   return (
     <>
