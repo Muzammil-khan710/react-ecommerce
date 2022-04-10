@@ -3,9 +3,12 @@ import "./ProductPage.css";
 
 import React from 'react'
 import { IcBaselineStar } from '../../images/Svg';
+import { useCart } from '../../context/Cart-context';
 
 const ProductsPage = () => {
   
+  const { dispatch } =  useCart()
+
   return (
     <>
     <h2>All products</h2>
@@ -21,10 +24,10 @@ const ProductsPage = () => {
          
 
           <h3>by category</h3>
-            <span><input className='radio' type="radio" name="" id="" />Analog</span>
-            <span><input type="radio" name="" id="" />Smart</span>
-            <span><input type="radio" name="" id="" />Automatic</span>
-            <span><input type="radio" name="" id="" />Chronograph</span>
+            <span><input className='radio' type="radio"  />Analog</span>
+            <span><input type="radio"  />Smart</span>
+            <span><input type="radio"  />Automatic</span>
+            <span><input type="radio"  />Chronograph</span>
             </div>
         </div>
 
@@ -65,12 +68,25 @@ const ProductsPage = () => {
                   </p>
 
                   <div className="crd-btn">
-                    <button className="btn green">
-                      Add to cart
+                     
+                    <button className="btn red" onClick={() => {
+                      dispatch({
+                        type: "REMOVE_FROM_CART",
+                        payload: item.id,
+                      })
+                    }}>
+                      Remove from Cart
                     </button>
-                    <button className="btn red">
-                      Move to Wishlist
+                
+                    <button className="btn green" onClick={() => {
+                      dispatch({
+                        type: "ADD_TO_CART",
+                        payload: item,
+                      });
+                    }}>
+                      Add to cart 
                     </button>
+ 
                   </div>
                 </div>
               </div>
