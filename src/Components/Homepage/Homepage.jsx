@@ -6,12 +6,14 @@ import { Link } from 'react-router-dom'
 
 const Homepage = () => {
   return (
-    <div className='image-container homepage-container'>
+    <div className=' homepage-container'>
+      <div className='image-container'>
         <img style={{height:"auto",width:"100%"}} src={HomeImg} alt="" />
-        <section className='section-area'>
+          <section className='section-area'>  
             <h2 className='section-text'>Exclusive offer upto 50% off</h2>
             <Link to="/products"><button className='explore-btn'>Explore all categories</button></Link>
-        </section>
+          </section>
+        </div>
         <h1>Available Categories</h1>
         <section className='category-container'>
         <div className="featured-product-type">
