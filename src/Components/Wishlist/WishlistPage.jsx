@@ -3,7 +3,7 @@ import { useCart } from '../../context/Cart-context';
 import { useWishlist } from '../../context/Wishlist-context';
 import "./Wishlist.css"
 
-const WishlistPage = () => {
+const Wishlist = () => {
 
     const { stateWishlist: {wishlist}, dispatchWishlist } = useWishlist();
     
@@ -51,4 +51,4 @@ const WishlistPage = () => {
   )
 }
 
-export { WishlistPage }
+export { Wishlist }

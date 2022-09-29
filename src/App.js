@@ -1,10 +1,9 @@
 import "./App.css";
-import { WishlistPage } from "./Components/Allcomps";
 import { Routes, Route } from "react-router-dom"
 import Mockman from "mockman-js";
 import { Authroute } from './Components/Authroute';
 import { Privateroute } from "./Components/Privateroute";
-import { CartPage, HomePage, LoginPage, ProductsPage, SignupPage } from "./pages/index";
+import { CartPage, HomePage, LoginPage, ProductsPage, SignupPage, WishlistPage } from "./pages/index";
 
 function App() {
   return (
