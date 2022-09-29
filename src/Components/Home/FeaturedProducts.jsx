@@ -1,5 +1,5 @@
 import React from "react";
-import "./Homepage.css"
+import "./Home.css"
 
 const FeaturedProducts = ({ src, title }) => {
   return (

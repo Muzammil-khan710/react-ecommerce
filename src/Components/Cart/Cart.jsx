@@ -1,6 +1,6 @@
 import React,{useState, useEffect} from 'react'
 import { useCart } from '../../context/Cart-context'
-import "./CartPage.css"
+import "./Cart.css"
 
 const Cart = () => {
 

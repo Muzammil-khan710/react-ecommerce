@@ -1,6 +1,6 @@
 import React from 'react'
 import { AnalogWatch, AutomaticWatch, ChronographWatch, HomeImg, SmartWatch } from '../../images/ImageExp'
-import './Homepage.css'
+import './Home.css'
 import { FeaturedProducts } from './FeaturedProducts'
 import { Link } from 'react-router-dom'
 

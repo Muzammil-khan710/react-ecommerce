@@ -1,5 +1,5 @@
 import { products } from '../../backend/db/products'
-import "./ProductPage.css";
+import "./Product.css";
 
 import React from 'react'
 import { IcBaselineStar } from '../../images/Svg';
