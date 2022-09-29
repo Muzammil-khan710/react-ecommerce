@@ -1,12 +1,11 @@
 import "./App.css";
-import { Footer, Navbar, Homepage, SignupPage, CartPage, WishlistPage } from "./Components/Allcomps";
+import { Homepage, CartPage, WishlistPage } from "./Components/Allcomps";
 import { ProductsPage } from "./Components/Products/ProductsPage";
 import { Routes, Route } from "react-router-dom"
 import Mockman from "mockman-js";
 import { Authroute } from './Components/Authroute';
 import { Privateroute } from "./Components/Privateroute";
-import { LoginPage } from "./pages/index";
-
+import { LoginPage, SignupPage } from "./pages/index";
 
 function App() {
   return (

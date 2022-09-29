@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { useAuth } from '../../context/Auth-context'
 import "./Signup.css"
 
-const SignupPage = () => {
+const Signup = () => {
 
   const { signUpFunc } = useAuth()
 
@@ -39,4 +39,4 @@ const SignupPage = () => {
   )
 }
 
-export { SignupPage }
+export { Signup }
