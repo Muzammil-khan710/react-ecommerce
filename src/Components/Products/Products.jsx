@@ -6,7 +6,7 @@ import { IcBaselineStar } from '../../images/Svg';
 import { useCart } from '../../context/Cart-context';
 import { useWishlist } from '../../context/Wishlist-context';
 
-const ProductsPage = () => {
+const Products = () => {
   
   const { state: {cart}, dispatch } =  useCart()
 
@@ -128,4 +128,4 @@ const ProductsPage = () => {
   )
 }
 
-export { ProductsPage }
+export { Products }

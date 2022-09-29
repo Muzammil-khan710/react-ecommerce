@@ -1,11 +1,11 @@
 import React from 'react'
-import { Footer, FeaturedProducts, Navbar } from '../Components/Allcomps'
+import { Footer, Navbar, Products } from '../Components/Allcomps'
 
 const ProductsPage = () => {
   return (
     <div>
         <Navbar/>
-        <FeaturedProducts/>
+        <Products/>
         <Footer/>
     </div>
   )
