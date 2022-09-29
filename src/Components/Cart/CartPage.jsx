@@ -2,7 +2,7 @@ import React,{useState, useEffect} from 'react'
 import { useCart } from '../../context/Cart-context'
 import "./CartPage.css"
 
-const CartPage = () => {
+const Cart = () => {
 
     const { state: {cart}, dispatch } = useCart();
 
@@ -75,6 +75,6 @@ const CartPage = () => {
   )
 }
 
-export { CartPage }
+export { Cart }
 
 
