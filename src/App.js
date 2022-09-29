@@ -5,13 +5,13 @@ import { Routes, Route } from "react-router-dom"
 import Mockman from "mockman-js";
 import { Authroute } from './Components/Authroute';
 import { Privateroute } from "./Components/Privateroute";
-import { Homepage, LoginPage, SignupPage } from "./pages/index";
+import { HomePage, LoginPage, SignupPage } from "./pages/index";
 
 function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Homepage/>} />
+        <Route path="/" element={<HomePage/>} />
         <Route path="/mockman" element={<div className="MockAPI"><Mockman /></div>}/>
         <Route path="/products" element={<ProductsPage/>} />
 

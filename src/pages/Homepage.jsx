@@ -1,7 +1,7 @@
 import React from 'react'
 import { Footer, Home, Navbar } from '../Components/Allcomps'
 
-const Homepage = () => {
+const HomePage = () => {
   return (
     <div>
         <Navbar/>
@@ -11,4 +11,4 @@ const Homepage = () => {
   )
 }
 
-export { Homepage }
+export { HomePage }
