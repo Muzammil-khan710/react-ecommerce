@@ -1,11 +1,14 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { useAuth } from '../../context/Auth-context'
 import "./Signup.css"
 
 const SignupPage = () => {
 
+  const { signUpFunc } = useAuth()
+
   const [newUser, setNewUser] = useState({
-    firsName : "",
+    firstName : "",
     lastName : "",
     email : "",
     password : ""
@@ -26,7 +29,7 @@ const SignupPage = () => {
           <input className="input" type="text" placeholder="name@mail.com"  onChange={(e)=> {setNewUser({...newUser, email: e.target.value})} }/>
           <p>Enter your password</p>
           <input className="input" type="password" placeholder="****"  onChange={(e)=> {setNewUser({...newUser, password: e.target.value})} }/>
-          <button className='btn d-grey btn-auth'>Submit</button>
+          <button className='btn d-grey btn-auth' onClick={(e) => signUpFunc(e, newUser)}>Submit</button>
           </form>
           <p className="t-cntr">or</p>
           <p>Already a customer? <Link className="link login-link" to="/Login">Log in</Link></p>

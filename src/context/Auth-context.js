@@ -41,12 +41,22 @@ const AuthProvider = ({children}) => {
         } 
     }
 
-    const signUpFunc = async () => {
-        const { data } = await axios.post('/api/auth/signup')
+    const signUpFunc = async (e, newUser) => {
+        e.preventDefault()
+
+        console.log(newUser)
+        try {
+            const { data } = await axios.post('/api/auth/signup', newUser )
+            console.log(data)
+            setUser(data.createdUser)
+            setToken(data.encodedToken)
+        } catch (err) {
+            console.log(err)
+        }
     }
 
     return(
-        <AuthContext.Provider value={{loginFunc, token, user}}>
+        <AuthContext.Provider value={{loginFunc, signUpFunc, token, user}}>
             {children}
         </AuthContext.Provider>
     )
