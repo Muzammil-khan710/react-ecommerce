@@ -2,6 +2,10 @@ import "./App.css";
 import { Footer, Navbar, Homepage, LoginPage, SignupPage, CartPage, WishlistPage } from "./Components/Allcomps";
 import { ProductsPage } from "./Components/Products/ProductsPage";
 import { Routes, Route } from "react-router-dom"
+import Mockman from "mockman-js";
+import { Authroute } from './Components/Authroute';
+import { Privateroute } from "./Components/Privateroute";
+
 
 function App() {
   return (
@@ -9,11 +13,18 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Homepage/>} />
+        <Route path="/mockman" element={<div className="MockAPI"><Mockman /></div>}/>
         <Route path="/products" element={<ProductsPage/>} />
-        <Route path="/Login" element={<LoginPage/>} />
-        <Route path="/Signup" element={<SignupPage/>} />
-        <Route path="/cart" element={<CartPage/>} />
-        <Route path="/wishlist" element={<WishlistPage/>} />
+
+        <Route element={<Authroute/>}>
+          <Route path="/Login" element={<LoginPage/>} />
+          <Route path="/Signup" element={<SignupPage/>} />
+        </Route>
+
+        <Route element={<Privateroute/>}>
+          <Route path="/cart" element={<CartPage/>} />
+          <Route path="/wishlist" element={<WishlistPage/>} />
+        </Route>
       </Routes>
       <Footer />
     </div>
