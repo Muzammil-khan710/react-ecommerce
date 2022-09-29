@@ -1,11 +1,11 @@
 import "./App.css";
-import { Homepage, CartPage, WishlistPage } from "./Components/Allcomps";
+import { CartPage, WishlistPage } from "./Components/Allcomps";
 import { ProductsPage } from "./Components/Products/ProductsPage";
 import { Routes, Route } from "react-router-dom"
 import Mockman from "mockman-js";
 import { Authroute } from './Components/Authroute';
 import { Privateroute } from "./Components/Privateroute";
-import { LoginPage, SignupPage } from "./pages/index";
+import { Homepage, LoginPage, SignupPage } from "./pages/index";
 
 function App() {
   return (

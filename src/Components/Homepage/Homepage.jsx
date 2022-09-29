@@ -4,7 +4,7 @@ import './Homepage.css'
 import { FeaturedProducts } from './FeaturedProducts'
 import { Link } from 'react-router-dom'
 
-const Homepage = () => {
+const Home = () => {
   return (
     <div className=' homepage-container'>
       <div className='image-container'>
@@ -27,4 +27,4 @@ const Homepage = () => {
   )
 }
 
-export { Homepage }
+export { Home }
