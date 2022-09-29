@@ -1,7 +1,7 @@
 export { Navbar } from "./Navbar/Navbar"
 export { Footer } from "./Footer/Footer"
 export { Homepage } from "./Homepage/Homepage"
-export { LoginPage } from "./Login/Login"
+export { Login } from "./Login/Login"
 export { SignupPage } from "./Signup/Signup"
 export { CartPage } from "./Cart/CartPage"
 export { WishlistPage } from "./Wishlist/WishlistPage"

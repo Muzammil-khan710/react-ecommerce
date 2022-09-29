@@ -1,4 +1,4 @@
-import { data } from '../../data/Data';
+import { products } from '../../backend/db/products'
 import "./ProductPage.css";
 
 import React from 'react'
@@ -35,7 +35,7 @@ const ProductsPage = () => {
         </div>
 
         <div className="card-container">
-          {data.map((item) => {
+          {products.map((item) => {
             const {
               id,
               name,

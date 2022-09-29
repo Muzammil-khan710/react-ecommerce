@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { useAuth } from '../../context/Auth-context'
 import "./Login.css"
 
-const LoginPage = () => {
+const Login = () => {
 
   const { loginFunc } = useAuth()
 
@@ -34,4 +34,4 @@ const LoginPage = () => {
   )
 }
 
-export { LoginPage }
+export { Login }
