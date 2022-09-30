@@ -5,7 +5,7 @@ import "./Wishlist.css"
 
 const Wishlist = () => {
 
-    const { stateWishlist: {wishlist}, dispatchWishlist } = useWishlist();
+    const { wishlistState: {wishlistItems}, dispatchWishlist, removeFromWishlist } = useWishlist();
     
     const { dispatch } = useCart();
 
@@ -16,20 +16,15 @@ const Wishlist = () => {
 
         <div className='left-cont'>
         {
-            wishlist.map((item) => (
-                <div className="card-cart">
+            wishlistItems.map((item) => (
+                <div className="card-cart" key={item._id}>
                     <div className="horizontal-card">
                         <img className="horizontal-card-img" src={item.imageSrc} alt={item.name}/>
                             <div className="horizontal-card-contents spc-ar">
                             <h3>{item.name}</h3>
                    
                             <div className="crd-btn">
-                            <button className="btn outline-red" onClick={() => {
-                            dispatchWishlist({
-                            type: "REMOVE_FROM_WISHLIST",
-                            payload: item.id,
-                            })
-                            }}>Remove from Wishlist</button>
+                            <button className="btn outline-red" onClick={() => removeFromWishlist(item._id) }>Remove from Wishlist</button>
 
                             <button className="btn outline-green" onClick={() => {
                                 dispatch({
@@ -38,7 +33,7 @@ const Wishlist = () => {
                                 })
                             }}>Add to Cart</button>
                         </div>
-                        </div>
+                        </div>  
                     </div>
                 </div>
                     

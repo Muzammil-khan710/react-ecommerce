@@ -9,7 +9,7 @@ const Products = () => {
   
   const { state: {cart}, dispatch } =  useCart()
 
-  const { stateWishlist : {wishlist},  dispatchWishlist } = useWishlist();
+  const { wishlistState: {wishlistItems}, addToWishlist, removeFromWishlist } = useWishlist();
 
   const [products, setProducts] = useState([])
 
@@ -76,6 +76,7 @@ const Products = () => {
                     )}
                   </p>
 
+                    <button onClick={() => { addToWishlist(item); console.log(item) } }>add to wishlist</button>
                   <div className="crd-btn">
                      {cart.find((d) => d.id === item.id) ? (
                     <button className="btn red" onClick={() => {
@@ -100,22 +101,13 @@ const Products = () => {
                   </div>
 
                   <div className="crd-btn">
-                     {wishlist.find((n) => n.id === item.id) ? (
-                    <button className="btn outline-red" onClick={() => {
-                      dispatchWishlist({
-                        type: "REMOVE_FROM_WISHLIST",
-                        payload: item.id,
-                      })
-                    }}>
+                    {wishlistItems.find((n) => n.id === item.id) ? (
+                    <button className="btn outline-red" 
+                    onClick={() => removeFromWishlist(item._id)}>
                       Remove from Wishlist
                     </button>
                      ) : (
-                    <button className="btn outline-green" onClick={() => {
-                      dispatchWishlist({
-                        type: "ADD_TO_WISHLIST",
-                        payload: item,
-                      });
-                    }}>
+                    <button className="btn outline-green"  onClick={() => addToWishlist(item)}>
                       Add to Wishlist
                     </button>
                     ) 

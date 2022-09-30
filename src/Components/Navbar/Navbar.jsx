@@ -11,7 +11,9 @@ const Navbar = () => {
 
   const { state: {cart}} =  useCart();
 
-  const { stateWishlist : {wishlist} } = useWishlist();
+  // const { stateWishlist : {wishlist} } = useWishlist();
+
+  const { wishlistState: {wishlistItems}, dispatchWishlist } = useWishlist();
 
   return (
     <div className='nav-content'>
@@ -20,7 +22,7 @@ const Navbar = () => {
        <div className='icon-container'>
          <Link className='link-product'to='/products'>Products</Link>
          <Link className='link-product' to="/cart"> <ShoppingCartIcon/>{ cart.length > 0 && <span className='bdg cart-bdg red'>{cart.length}  </span> } </Link>       
-         <Link className='link-product' to="/wishlist"> <WishlistIcon/>{ wishlist.length > 0 && <span className='bdg cart-bdg red'>{wishlist.length}  </span> }  </Link>
+         <Link className='link-product' to="/wishlist"> <WishlistIcon/>{ wishlistItems.length > 0 && <span className='bdg cart-bdg red'>{wishlistItems.length}  </span> }  </Link>
          <div>
           <UserProfile className='profile' onClick={() => setShow(prev => !prev)}/>
           {show &&

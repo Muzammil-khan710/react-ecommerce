@@ -1,14 +1,14 @@
-const WishlistReducer = (state, action) => {
+const WishlistReducer = (wishlistState, action) => {
     switch (action.type) {
 
         case"ADD_TO_WISHLIST":
-            return { ...state, wishlist:[...state.wishlist , {...action.payload, qty:1}] };
+            return { ...wishlistState, wishlistItems: action.payload };
 
         case"REMOVE_FROM_WISHLIST":
-            return { ...state, wishlist: state.wishlist.filter((c) => c.id !== action.payload)}
+            return { ...wishlistState, wishlistItems: action.payload };
 
         default:
-            return state;
+            return wishlistState;
     }
 }
 
