@@ -1,16 +1,24 @@
-import { products } from '../../backend/db/products'
 import "./Product.css";
-
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { IcBaselineStar } from '../../images/Svg';
 import { useCart } from '../../context/Cart-context';
 import { useWishlist } from '../../context/Wishlist-context';
+import axios from 'axios';
 
 const Products = () => {
   
   const { state: {cart}, dispatch } =  useCart()
 
   const { stateWishlist : {wishlist},  dispatchWishlist } = useWishlist();
+
+  const [products, setProducts] = useState([])
+
+  useEffect(() => {
+    (async () => {
+      const { data } = await axios.get('/api/products')
+      setProducts(data.products)
+    })()
+  }, [])
 
   return (
     <>
