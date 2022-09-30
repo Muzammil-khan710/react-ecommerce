@@ -21,16 +21,14 @@ const Products = () => {
           <h2>Filters</h2>
 
           <div className="checkbox-container">
-            <span><input className="checkbox" type="checkbox" />Price: High to low </span>
-            <span><input className="checkbox" type="checkbox" />Price: Low to high</span>
-            <span><input className="checkbox" type="checkbox" /> Rating</span>
-         
+            <span><input className='category-input' type="radio" />Price: High to low </span>
+            <span><input className='category-input' type="radio" />Price: Low to high</span>         
 
-          <h3>by category</h3>
-            <span><input className='radio' type="radio"  />Analog</span>
-            <span><input type="radio"  />Smart</span>
-            <span><input type="radio"  />Automatic</span>
-            <span><input type="radio"  />Chronograph</span>
+          <h3>By category</h3>
+            <span><input className='category-input' type="checkbox" />Analog</span>
+            <span><input className='category-input' type="checkbox" />Smart</span>
+            <span><input className='category-input' type="checkbox" />Automatic</span>
+            <span><input className='category-input' type="checkbox" />Chronograph</span>
             </div>
         </div>
 

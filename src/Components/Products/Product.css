@@ -42,3 +42,7 @@
 img {
   object-fit: cover;
 }
+
+.category-input {
+  margin-right: 5px;
+}
