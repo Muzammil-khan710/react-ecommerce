@@ -15,10 +15,6 @@ const AuthProvider = ({children}) => {
     ? JSON.parse(localStorage.getItem("token"))
     :null)
     
-    
-    console.log(user)
-    console.log(token)
-
     const loginFunc = async (e, email, password) => {
         e.preventDefault()
 

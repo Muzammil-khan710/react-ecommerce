@@ -52,8 +52,6 @@ const WishlistProvider = ({children}) => {
 
     }
 
-
-
     return(
         <WishlistContext.Provider value={{wishlistState, dispatchWishlist, addToWishlist, removeFromWishlist}}>
             {children}

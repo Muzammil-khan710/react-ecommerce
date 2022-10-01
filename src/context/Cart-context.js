@@ -60,7 +60,6 @@ const CartProvider = ({children}) => {
         }
 
         try { 
-            console.log('from incre')
             const { data } = await axios.post(`/api/user/cart/${productId}`, { action : {type : "increment"}},  config)
             dispatchCart({
                 type : "INCREMENT",
@@ -81,7 +80,6 @@ const CartProvider = ({children}) => {
         }
 
         try { 
-            console.log('from decre')
             const { data } = await axios.post(`/api/user/cart/${productId}`, { action : {type : "decrement"}}, config)
             dispatchCart({
                 type : "DECREMENT",

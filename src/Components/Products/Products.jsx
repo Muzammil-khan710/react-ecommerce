@@ -82,7 +82,7 @@ const Products = () => {
                       Remove from Cart
                     </button>
                      ) : (
-                    <button className="btn green" onClick={() => addToCart(item) }>
+                    <button className="btn green" onClick={() => { addToCart(item); removeFromWishlist(item._id) } }>
                       Add to cart 
                     </button>
                     ) 
@@ -96,7 +96,7 @@ const Products = () => {
                       Remove from Wishlist
                     </button>
                      ) : (
-                    <button className="btn outline-green"  onClick={() => addToWishlist(item)}>
+                    <button className="btn outline-green"  onClick={() => { addToWishlist(item); removeFromCart(item._id) }}>
                       Add to Wishlist
                     </button>
                     ) 
