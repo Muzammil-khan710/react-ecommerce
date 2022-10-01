@@ -5,9 +5,9 @@ import "./Wishlist.css"
 
 const Wishlist = () => {
 
-    const { wishlistState: {wishlistItems}, dispatchWishlist, removeFromWishlist } = useWishlist();
+    const { wishlistState: {wishlistItems}, removeFromWishlist } = useWishlist();
     
-    const { dispatch } = useCart();
+    const { addToCart } = useCart();
 
   return (
     <>
@@ -26,12 +26,7 @@ const Wishlist = () => {
                             <div className="crd-btn">
                             <button className="btn outline-red" onClick={() => removeFromWishlist(item._id) }>Remove from Wishlist</button>
 
-                            <button className="btn outline-green" onClick={() => {
-                                dispatch({
-                                    type: "ADD_TO_CART",
-                                    payload: item,
-                                })
-                            }}>Add to Cart</button>
+                            <button className="btn outline-green" onClick={() => { removeFromWishlist(item._id); addToCart(item) } }>Add to Cart</button>
                         </div>
                         </div>  
                     </div>

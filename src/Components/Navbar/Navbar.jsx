@@ -9,11 +9,9 @@ const Navbar = () => {
 
   const [show, setShow] = useState(false);
 
-  const { state: {cart}} =  useCart();
+  const { cartState: {cartItems}} =  useCart();
 
-  // const { stateWishlist : {wishlist} } = useWishlist();
-
-  const { wishlistState: {wishlistItems}, dispatchWishlist } = useWishlist();
+  const { wishlistState: {wishlistItems} } = useWishlist();
 
   return (
     <div className='nav-content'>
@@ -21,7 +19,7 @@ const Navbar = () => {
        <input className='input-area' type="text"  placeholder='Search watches..'/>
        <div className='icon-container'>
          <Link className='link-product'to='/products'>Products</Link>
-         <Link className='link-product' to="/cart"> <ShoppingCartIcon/>{ cart.length > 0 && <span className='bdg cart-bdg red'>{cart.length}  </span> } </Link>       
+         <Link className='link-product' to="/cart"> <ShoppingCartIcon/>{ cartItems.length > 0 && <span className='bdg cart-bdg red'>{cartItems.length}  </span> } </Link>       
          <Link className='link-product' to="/wishlist"> <WishlistIcon/>{ wishlistItems.length > 0 && <span className='bdg cart-bdg red'>{wishlistItems.length}  </span> }  </Link>
          <div>
           <UserProfile className='profile' onClick={() => setShow(prev => !prev)}/>

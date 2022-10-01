@@ -25,10 +25,8 @@
     margin: 2rem;
     background-color: var(--color-dark-blue);
     color:var(--color-grey);
-    height: 20rem;
+    height: 16rem;
     width: 20rem;
-    margin-top: 7rem;
-    margin-bottom: 11rem;
 }
 
 .cart-container {
@@ -52,7 +50,7 @@
 
 .side-bar-text {
     display: flex;
-    padding: 2rem;
+    padding: 1rem;
 }
 
 .total {

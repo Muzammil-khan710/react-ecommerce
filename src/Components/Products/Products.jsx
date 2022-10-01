@@ -7,7 +7,7 @@ import axios from 'axios';
 
 const Products = () => {
   
-  const { state: {cart}, dispatch } =  useCart()
+  const { cartState: {cartItems}, addToCart, removeFromCart } =  useCart()
 
   const { wishlistState: {wishlistItems}, addToWishlist, removeFromWishlist } = useWishlist();
 
@@ -76,24 +76,13 @@ const Products = () => {
                     )}
                   </p>
 
-                    <button onClick={() => { addToWishlist(item); console.log(item) } }>add to wishlist</button>
                   <div className="crd-btn">
-                     {cart.find((d) => d.id === item.id) ? (
-                    <button className="btn red" onClick={() => {
-                      dispatch({
-                        type: "REMOVE_FROM_CART",
-                        payload: item.id,
-                      })
-                    }}>
+                     {cartItems.find((d) => d.id === item.id) ? (
+                    <button className="btn red" onClick={() =>  removeFromCart(item._id)}>
                       Remove from Cart
                     </button>
                      ) : (
-                    <button className="btn green" onClick={() => {
-                      dispatch({
-                        type: "ADD_TO_CART",
-                        payload: item,
-                      });
-                    }}>
+                    <button className="btn green" onClick={() => addToCart(item) }>
                       Add to cart 
                     </button>
                     ) 
