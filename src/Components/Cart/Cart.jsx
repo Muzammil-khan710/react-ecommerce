@@ -52,7 +52,7 @@ const Cart = () => {
                     <div className='qty-cont'>
                         <button className='qty-btn green' onClick={() => incrementQty(item._id)}>+</button>
                          {item.qty}
-                        <button className='qty-btn red' onClick={() => decrementQty(item._id)}>-</button>
+                        <button className='qty-btn red' onClick={() => { item.qty > 1 ? decrementQty(item._id) : removeFromCart(item._id) } }>-</button>
                     </div>
                     <div className="crd-btn">
                         <button className="btn outline-green" onClick={() => removeFromCart(item._id) }>Remove from cart</button>
