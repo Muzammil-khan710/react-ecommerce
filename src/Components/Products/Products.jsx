@@ -4,6 +4,7 @@ import { IcBaselineStar } from '../../images/Svg';
 import { useCart } from '../../context/Cart-context';
 import { useWishlist } from '../../context/Wishlist-context';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const Products = () => {
   
@@ -13,12 +14,26 @@ const Products = () => {
 
   const [products, setProducts] = useState([])
 
+  const navigate  = useNavigate()
+
+  const user = localStorage.getItem("user")
+
   useEffect(() => {
     (async () => {
       const { data } = await axios.get('/api/products')
       setProducts(data.products)
     })()
   }, [])
+
+  const wishlistToggler = (item) => {
+    addToWishlist(item);
+    removeFromCart(item._id)
+  }
+
+  const cartToggler = (item) => {
+    addToCart(item);
+    removeFromWishlist(item._id)
+  }
 
   return (
     <>
@@ -78,11 +93,11 @@ const Products = () => {
 
                   <div className="crd-btn">
                      {cartItems.find((d) => d.id === item.id) ? (
-                    <button className="btn red" onClick={() =>  removeFromCart(item._id)}>
+                    <button className="btn red" onClick={() => { user ? (removeFromCart(item._id)) : navigate('/login') } }>
                       Remove from Cart
                     </button>
                      ) : (
-                    <button className="btn green" onClick={() => { addToCart(item); removeFromWishlist(item._id) } }>
+                    <button className="btn green" onClick={() => { user ? cartToggler(item) : navigate('/login') } }>
                       Add to cart 
                     </button>
                     ) 
@@ -92,11 +107,11 @@ const Products = () => {
                   <div className="crd-btn">
                     {wishlistItems.find((n) => n.id === item.id) ? (
                     <button className="btn outline-red" 
-                    onClick={() => removeFromWishlist(item._id)}>
+                    onClick={() => { user ? removeFromWishlist(item._id) : navigate('/login') }}>
                       Remove from Wishlist
                     </button>
                      ) : (
-                    <button className="btn outline-green"  onClick={() => { addToWishlist(item); removeFromCart(item._id) }}>
+                    <button className="btn outline-green"  onClick={() => { user ? wishlistToggler(item) : navigate('/login') }}>
                       Add to Wishlist
                     </button>
                     ) 
