@@ -1,12 +1,12 @@
 import "./Product.css";
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { IcBaselineStar } from '../../images/Svg';
 import { useCart } from '../../context/Cart-context';
 import { useWishlist } from '../../context/Wishlist-context';
-import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import 'react-lazy-load-image-component/src/effects/blur.css';
+import { useProducts } from "../../context/Product-context";
 
 const Products = () => {
   
@@ -14,18 +14,11 @@ const Products = () => {
 
   const { wishlistState: {wishlistItems}, addToWishlist, removeFromWishlist } = useWishlist();
 
-  const [products, setProducts] = useState([])
+  const { products }  = useProducts()
 
   const navigate  = useNavigate()
 
   const user = localStorage.getItem("user")
-
-  useEffect(() => {
-    (async () => {
-      const { data } = await axios.get('/api/products')
-      setProducts(data.products)
-    })()
-  }, [])
 
   const wishlistToggler = (item) => {
     addToWishlist(item);
