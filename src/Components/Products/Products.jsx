@@ -1,5 +1,5 @@
 import "./Product.css";
-import React from 'react'
+import React, {useReducer} from 'react'
 import { IcBaselineStar } from '../../images/Svg';
 import { useCart } from '../../context/Cart-context';
 import { useWishlist } from '../../context/Wishlist-context';
@@ -7,6 +7,8 @@ import { useNavigate } from 'react-router-dom';
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import { useProducts } from "../../context/Product-context";
+import { reducer, sortPriceFilter } from './../../reducer/FilterReducer';
+import { categoryFiltered } from './../Filters';
 
 const Products = () => {
   
@@ -19,6 +21,18 @@ const Products = () => {
   const navigate  = useNavigate()
 
   const user = localStorage.getItem("user")
+
+  const [state, dispatch] = useReducer(reducer, {
+    sortBy: ""  ,
+    Analog: false,
+    Automatic: false,
+    Chronograph: false,
+    SmartWatch: false,
+});
+
+const categoryFilteredProduct = categoryFiltered(products, state, state.sortBy);
+        
+const PriceWishFilter = sortPriceFilter(categoryFilteredProduct, state.sortBy);
 
   const wishlistToggler = (item) => {
     addToWishlist(item);
@@ -37,21 +51,22 @@ const Products = () => {
 
         <div className="left-container">
           <h2>Filters</h2>
+          <button className="filter-btn" onClick={() => dispatch({type :"CLEAR_FILTER"})} >Clear All</button>
 
           <div className="checkbox-container">
-            <span><input className='category-input' type="radio" />Price: High to low </span>
-            <span><input className='category-input' type="radio" />Price: Low to high</span>         
+            <span><input className='category-input' type="radio"  checked={ state.sortBy === "LOW_TO_HIGH"} onChange={() => dispatch({ type: "LOW_TO_HIGH"})}/>Price: Low to high </span>
+            <span><input className='category-input' type="radio"  checked={ state.sortBy === "HIGH_TO_LOW"} onChange={() => dispatch({ type: "HIGH_TO_LOW"})}/>Price: High to low</span>         
 
-          <h3>By category</h3>
-            <span><input className='category-input' type="checkbox" />Analog</span>
-            <span><input className='category-input' type="checkbox" />Smart</span>
-            <span><input className='category-input' type="checkbox" />Automatic</span>
-            <span><input className='category-input' type="checkbox" />Chronograph</span>
+          <h3>By category</h3>  
+            <span><input className='category-input' type="checkbox" checked={state.Analog} onChange={() => dispatch({type: "ANALOG"})} />Analog</span>
+            <span><input className='category-input' type="checkbox" checked={state.SmartWatch} onChange={() => dispatch({type: "SMARTWATCH"})}/>Smart</span>
+            <span><input className='category-input' type="checkbox" checked={state.Automatic} onChange={() => dispatch({type: "AUTOMATIC"})}/>Automatic</span>
+            <span><input className='category-input' type="checkbox" checked={state.Chronograph} onChange={() => dispatch({type: "CHRONOGRAPH"})}/>Chronograph</span>
             </div>
         </div>
 
         <div className="card-container">
-          {products.map((item) => {
+          {PriceWishFilter.map((item) => {
             const {
               id,
               name,
