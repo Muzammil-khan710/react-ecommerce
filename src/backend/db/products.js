@@ -47,7 +47,7 @@ export const products = [
     imageSrc: MiSmartWatch,
     inStock: true,
     fastDelivery: true,
-    categoryName: "Smart watch",
+    categoryName: "SmartWatch",
     rating: 5.0
   },
   {
@@ -61,7 +61,7 @@ export const products = [
     imageSrc: HrxSmartWatch,
     inStock: true,
     fastDelivery: true,
-    categoryName: "Smart watch",
+    categoryName: "SmartWatch",
     rating: 3.9
   },
   {
@@ -75,7 +75,7 @@ export const products = [
     imageSrc: OnePlusSmartWatch,
     inStock: true,
     fastDelivery: true,
-    categoryName: "Smart watch",
+    categoryName: "SmartWatch",
     rating: 4.0
   },
   {
@@ -131,7 +131,7 @@ export const products = [
     imageSrc: BovetAutomaticWatch,
     inStock: true,
     fastDelivery: true,
-    categoryName: "Analog",
+    categoryName: "Automatic",
     rating: 4.9
   },
   {
@@ -145,7 +145,7 @@ export const products = [
     imageSrc: SeikoAutomaticWatch,
     inStock: true,
     fastDelivery: true,
-    categoryName: "Analog",
+    categoryName: "Automatic",
     rating: 4.0
   }
 ]
