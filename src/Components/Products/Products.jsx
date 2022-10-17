@@ -1,5 +1,5 @@
 import "./Product.css";
-import React, {useReducer} from 'react'
+import React from 'react'
 import { IcBaselineStar } from '../../images/Svg';
 import { useCart } from '../../context/Cart-context';
 import { useWishlist } from '../../context/Wishlist-context';
@@ -7,8 +7,9 @@ import { useNavigate } from 'react-router-dom';
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import { useProducts } from "../../context/Product-context";
-import { reducer, sortPriceFilter } from './../../reducer/FilterReducer';
+import { sortPriceFilter } from './../../reducer/FilterReducer';
 import { categoryFiltered } from './../Filters';
+import { useFilter } from "../../context/Filter-context";
 
 const Products = () => {
   
@@ -22,17 +23,11 @@ const Products = () => {
 
   const user = localStorage.getItem("user")
 
-  const [state, dispatch] = useReducer(reducer, {
-    sortBy: ""  ,
-    Analog: false,
-    Automatic: false,
-    Chronograph: false,
-    SmartWatch: false,
-});
+  const { state, dispatch } = useFilter()
 
-const categoryFilteredProduct = categoryFiltered(products, state, state.sortBy);
-        
-const PriceWishFilter = sortPriceFilter(categoryFilteredProduct, state.sortBy);
+  const categoryFilteredProduct = categoryFiltered(products, state, state.sortBy);
+          
+  const PriceWishFilter = sortPriceFilter(categoryFilteredProduct, state.sortBy);
 
   const wishlistToggler = (item) => {
     addToWishlist(item);

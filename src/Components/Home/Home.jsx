@@ -10,20 +10,19 @@ const Home = () => {
   return (
     <div className=' homepage-container'>
       <div className='image-container'>
-        {/* <img style={{height:"auto",width:"100%"}} src={HomeImg} alt="" /> */}
         <LazyLoadImage style={{height:"auto",width:"100%"}} src={HomeImg}  effect="blur" />
           <section className='section-area'>  
             <h2 className='section-text'>Exclusive offer upto 50% off</h2>
-            <Link to="/products"><button className='explore-btn'>Explore all categories</button></Link>
+              <Link className='explore-link' to="/products">Explore all categories</Link>
           </section>
         </div>
         <h1>Available Categories</h1>
         <section className='category-container'>
         <div className="featured-product-type">
-          <FeaturedProducts src={AutomaticWatch} title="AutomaticWatch" />
-          <FeaturedProducts src={AnalogWatch} title="AnalogWatch" />
-          <FeaturedProducts src={ChronographWatch} title="ChronographWatch" />
-          <FeaturedProducts src={SmartWatch} title="SmartWatch" />
+          <FeaturedProducts src={AutomaticWatch} title="AutomaticWatch" category='AUTOMATIC'/>
+          <FeaturedProducts src={AnalogWatch} title="AnalogWatch" category='ANALOG'/>
+          <FeaturedProducts src={ChronographWatch} title="ChronographWatch" category='CHRONOGRAPH'/>
+          <FeaturedProducts src={SmartWatch} title="SmartWatch" category='SMARTWATCH'/>
         </div>
         </section>
     </div>
