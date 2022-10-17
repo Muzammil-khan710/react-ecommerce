@@ -9,10 +9,12 @@ const Cart = () => {
 
     const { addToWishlist } = useWishlist()
     
-    const [originalPrice, setOriginalPrice] = useState(0)
-    const [discountedPrice, setDiscountedPrice] = useState(0)
-    const [total,setTotal] = useState(0)
-    const [qty, setQty] = useState(0)
+    const [cartTotal, setCartTotal] = useState({
+        originalPrice : 0,
+        discountedPrice : 0,
+        total : 0,
+        qty: 0
+    })
 
     const calcAllValues = () => {
         let totalPrice = 0;
@@ -27,10 +29,7 @@ const Cart = () => {
                     discPrice += (cartItem.originalPrice - cartItem.discountPrice) * cartItem.qty
                     )})
 
-        setQty(totalQty)
-        setTotal(totalPrice)
-        setOriginalPrice(orgPrice)
-        setDiscountedPrice(discPrice)
+        setCartTotal({...cartTotal, qty: totalQty, originalPrice: orgPrice, discountedPrice: discPrice, total: totalPrice})
     }
 
     useEffect(() =>{
@@ -67,11 +66,11 @@ const Cart = () => {
         </div>
 
         <div className='side-bar'>
-            <div>Total { qty } { qty === 1  ? "item" : "items"} </div>
-            <div className='side-bar-text'>Original price <span className="side-bar-values striken-text"> { originalPrice } </span> </div>
-            <div className='side-bar-text'>Total discount<span className="side-bar-values "> { discountedPrice } </span> </div>
-            <div className='side-bar-text'>Delivery charges<span className="side-bar-values "> { total >= 30000 ? "1000" : "0" } </span> </div>
-            <div className='side-bar-text total'>Net Total <span className="side-bar-values total"> { total >= 30000 ? total + 1000 : total } </span> </div>
+            <div>Total { cartTotal.qty } { cartTotal.qty === 1  ? "item" : "items"} </div>
+            <div className='side-bar-text'>Original price <span className="side-bar-values striken-text"> { cartTotal.originalPrice } </span> </div>
+            <div className='side-bar-text'>Total discount<span className="side-bar-values "> { cartTotal.discountedPrice } </span> </div>
+            <div className='side-bar-text'>Delivery charges<span className="side-bar-values "> { cartTotal.total >= 30000 ? "1000" : "0" } </span> </div>
+            <div className='side-bar-text total'>Net Total <span className="side-bar-values total"> { cartTotal.total >= 30000 ? cartTotal.total + 1000 : cartTotal.total } </span> </div>
         </div>
 
     </div>
