@@ -16,24 +16,24 @@ const Cart = () => {
         qty: 0
     })
 
-    const calcAllValues = () => {
-        let totalPrice = 0;
-        let orgPrice = 0;
-        let discPrice = 0;
-        let totalQty = 0;
-        cartItems.map((cartItem) => { 
-            return(
-                    totalQty += cartItem.qty,
-                    totalPrice += cartItem.discountPrice * cartItem.qty,
-                    orgPrice += cartItem.originalPrice * cartItem.qty,
-                    discPrice += (cartItem.originalPrice - cartItem.discountPrice) * cartItem.qty
-                    )})
-
-        setCartTotal({...cartTotal, qty: totalQty, originalPrice: orgPrice, discountedPrice: discPrice, total: totalPrice})
-    }
+   
 
     useEffect(() =>{
-        calcAllValues();
+        (() => {
+            let totalPrice = 0;
+            let orgPrice = 0;
+            let discPrice = 0;
+            let totalQty = 0;
+            cartItems.map((cartItem) => { 
+                return(
+                        totalQty += cartItem.qty,
+                        totalPrice += cartItem.discountPrice * cartItem.qty,
+                        orgPrice += cartItem.originalPrice * cartItem.qty,
+                        discPrice += (cartItem.originalPrice - cartItem.discountPrice) * cartItem.qty
+                        )})
+    
+            setCartTotal({...cartTotal, qty: totalQty, originalPrice: orgPrice, discountedPrice: discPrice, total: totalPrice})
+        })()
         // eslint-disable-next-line
     }, [cartItems])
 

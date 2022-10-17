@@ -18,13 +18,13 @@ ReactDOM.render(
     <BrowserRouter>
       <ProductsProvider>
         <FilterProvider>
-        <AuthProvider>
-          <WishlistProvider>
-            <CartProvider>
-              <App />
-            </CartProvider>
-          </WishlistProvider>
-        </AuthProvider>
+          <AuthProvider>
+            <WishlistProvider>
+              <CartProvider>
+                <App />
+              </CartProvider>
+            </WishlistProvider>
+          </AuthProvider>
         </FilterProvider>
       </ProductsProvider>
     </BrowserRouter>

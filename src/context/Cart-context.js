@@ -65,7 +65,6 @@ const CartProvider = ({children}) => {
                 type : "INCREMENT",
                 payload : data.cart
             })
-            console.log(data)
         } catch (err) {
             console.log(err)
         }
@@ -85,14 +84,10 @@ const CartProvider = ({children}) => {
                 type : "DECREMENT",
                 payload : data.cart
             })
-            console.log(data)
         } catch (err) {
             console.log(err)
         }
     }
-
-
-
 
     return(
         <CartContext.Provider value={{ cartState, dispatchCart, addToCart, removeFromCart, incrementQty, decrementQty}}>
