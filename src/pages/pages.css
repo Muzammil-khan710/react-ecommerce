@@ -1,0 +1,6 @@
+.page-one {
+    display: flex;
+    height: 100vh;
+    flex-flow: column;
+    justify-content: space-between;
+}

@@ -18,9 +18,6 @@ const AuthProvider = ({children}) => {
     const loginFunc = async (e, email, password) => {
         e.preventDefault()
 
-        console.log(email)
-        console.log(password)
-
         try {
             const { data } = await axios.post('/api/auth/login', {
             email, 
@@ -40,10 +37,8 @@ const AuthProvider = ({children}) => {
     const signUpFunc = async (e, newUser) => {
         e.preventDefault()
 
-        console.log(newUser)
         try {
             const { data } = await axios.post('/api/auth/signup', newUser )
-            console.log(data)
             setUser(data.createdUser)
             setToken(data.encodedToken) 
             localStorage.setItem("token", JSON.stringify(data.encodedToken))
@@ -53,8 +48,15 @@ const AuthProvider = ({children}) => {
         }
     }
 
+    const logoutFunc = () => {
+        setUser(null)
+        setToken(null)
+        localStorage.removeItem("token")
+        localStorage.removeItem("user")
+    }
+
     return(
-        <AuthContext.Provider value={{loginFunc, signUpFunc, token, user}}>
+        <AuthContext.Provider value={{loginFunc, signUpFunc, logoutFunc, token, user}}>
             {children}
         </AuthContext.Provider>
     )

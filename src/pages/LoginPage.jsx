@@ -3,7 +3,7 @@ import { Navbar, Login, Footer } from '../Components/Allcomps'
 
 const LoginPage = () => {
   return (
-    <div>
+    <div className='page-one'>
         <Navbar/>
         <Login/>
         <Footer/>

@@ -5,8 +5,12 @@
     width: 100%;
 }
 
-.image-container {
+.image-container-one {
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 1rem;
 }
 
 .explore-link {
@@ -17,7 +21,7 @@
     border: none;
     cursor: pointer;
     text-decoration: none;
-    padding: 1rem;
+    padding: 1rem 3rem;
 }
 
 .section-area {
@@ -25,9 +29,9 @@
     flex-direction: column;
     align-items: center;
     position: absolute;
-    top: 40%;
+    justify-content: center;
 }
-
+    
 .section-text {
     color: var(--color-background);
     font-size: 3rem;
@@ -49,4 +53,14 @@
 .products-link:hover {
     background-color: var(--color-grey);
     font-weight: 600;
+}
+
+@media screen and (max-width: 750px) {
+    h2.section-text {
+        font-size: 2rem;
+    }
+
+    .explore-link {
+        padding: 0.5rem 1.5rem;
+    }
 }

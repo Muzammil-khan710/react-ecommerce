@@ -21,8 +21,24 @@ const UserProfile = (props) => {
 
 const IcBaselineStar = (props) => {
   return (
-    <svg width="1.2rem" height="1.2rem" viewBox="0 0 24 24" {...props}><path fill="#E7EE86" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21z"></path></svg>
+    <svg width="1.2rem" height="1.2rem" viewBox="0 0 24 24" {...props}><path fill="#dde7e5" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21z"></path></svg>
   )
 }
 
-export { ShoppingCartIcon , WishlistIcon , UserProfile , IcBaselineStar }
+
+
+const Login = (props) => {
+  return (
+    <svg width="2rem" height="2rem" viewBox="0 0 24 24" {...props}><path fill="currentColor" d="M5 5h7V3H3v18h9v-2H5z"></path><path fill="currentColor" d="m21 12l-4-4v3H9v2h8v3z"></path></svg>
+  )
+}
+
+
+const Logout = (props) => {
+  return (
+    <svg width="2rem" height="2rem" viewBox="0 0 24 24" {...props}><path fill="currentColor" d="M11 7L9.6 8.4l2.6 2.6H2v2h10.2l-2.6 2.6L11 17l5-5l-5-5zm9 12h-8v2h10V3H12v2h8v14z"></path></svg>
+  )
+}
+
+
+export { ShoppingCartIcon , WishlistIcon , UserProfile , IcBaselineStar, Login, Logout }

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import { useCart } from '../../context/Cart-context';
 import { useWishlist } from '../../context/Wishlist-context';
 import "./Wishlist.css"
@@ -11,7 +12,7 @@ const Wishlist = () => {
 
   return (
     <>
-    <div>
+        {wishlistItems.length > 0 ? 
         <div className='cart-container'>
 
         <div className='left-cont'>
@@ -36,7 +37,8 @@ const Wishlist = () => {
         }
         </div>
        </div>
-      </div>
+       : <h1>Your wishlist is empty ! Please add items from <Link to='/products' className='home-link'>Products</Link> </h1>
+    }
    </>
   )
 }

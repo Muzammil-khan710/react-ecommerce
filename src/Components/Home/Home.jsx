@@ -9,11 +9,11 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 const Home = () => {
   return (
     <div className=' homepage-container'>
-      <div className='image-container'>
+      <div className=' image-container-one'>
         <LazyLoadImage style={{height:"auto",width:"100%"}} src={HomeImg}  effect="blur" />
           <section className='section-area'>  
             <h2 className='section-text'>Exclusive offer upto 50% off</h2>
-              <Link className='explore-link' to="/products">Explore all categories</Link>
+              <Link className='explore-link' to="/products">Explore</Link>
           </section>
         </div>
         <h1>Available Categories</h1>

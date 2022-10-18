@@ -1,19 +1,33 @@
 .nav-content {
     display: flex;
-    justify-content: flex-end;
-    gap:2rem;
+    justify-content: space-between;
     align-items: center;
     height: 6rem;
     background-color: var(--color-dark-blue);
 }
 
-.brand-name {
-    font-size: 2.5rem;
-    position: absolute;
-    left: 2rem;
+.nav-btn {
+    padding: 0.5rem 1.5rem;
+    border-radius:5px;
     color: var(--color-grey);
 }
 
+.nav-btn-link {
+    padding: 0.5rem 1.5rem;
+    border-radius:5px;
+    background-color: var(--color-grey);
+    font-size: 15px;
+    text-decoration: none;
+    color: var(--color-dark-blue);
+}
+
+
+.brand-name {
+    font-size: 2.5rem;
+    padding-left: 2rem;
+    color: var(--color-grey);
+}
+    
 .input-area {
     height: 2.7rem;
     width: 15rem;
@@ -27,7 +41,7 @@
     display: flex;
     padding: 1rem;
     align-items: center;
-    gap: 3rem;
+    gap: 1rem;
 }
 
 .link-product {
@@ -53,4 +67,24 @@
 
 .profile {
     cursor: pointer;
+}
+
+@media screen and (max-width: 750px) {
+
+    .brand-name {
+        padding-left: 3px;
+        font-size: 1.5rem;
+    }
+
+    .icon-container {
+        gap: 0;
+    }
+
+    .nav-btn {
+        padding: 0.2rem 0.4rem;
+    }
+
+    .icon-container {
+        padding: 0;
+    }
 }

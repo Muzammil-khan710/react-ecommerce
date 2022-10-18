@@ -3,7 +3,7 @@ import { Footer, Navbar, Products } from '../Components/Allcomps'
 
 const ProductsPage = () => {
   return (
-    <div>
+    <div className='page-one'>
         <Navbar/>
         <Products/>
         <Footer/>

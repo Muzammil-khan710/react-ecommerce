@@ -3,7 +3,7 @@ import { Footer, Home, Navbar } from '../Components/Allcomps'
 
 const HomePage = () => {
   return (
-    <div>
+    <div className='page-one'>
         <Navbar/>
         <Home/>
         <Footer/>

@@ -1,9 +1,10 @@
 import React from 'react'
 import { Cart, Footer, Navbar } from '../Components/Allcomps'
+import './pages.css'
 
 const CartPage = () => {
   return (
-    <div>
+    <div className='page-one'>
         <Navbar/>
         <Cart/>
         <Footer/>

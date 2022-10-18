@@ -3,7 +3,7 @@ import { Footer, Navbar, Wishlist } from '../Components/Allcomps'
 
 const WishlistPage = () => {
   return (
-    <div>
+    <div className='page-one'>
         <Navbar/>
         <Wishlist/>
         <Footer/>

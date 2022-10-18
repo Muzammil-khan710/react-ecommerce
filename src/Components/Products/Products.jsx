@@ -77,7 +77,6 @@ const Products = () => {
             return (
               <div className="card" key={id}>
                 <div className="card-picture">
-                  {/* <img className="card-img" src={imageSrc} alt={name} /> */}
                   <LazyLoadImage className="card-img" src={imageSrc}  alt={name} effect="blur" />
                   {hasOffer && (
                     <span className="card-badge bdg-card bdg-icon red">{badgeMessage}</span>
