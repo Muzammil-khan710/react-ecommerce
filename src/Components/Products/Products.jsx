@@ -10,6 +10,7 @@ import { useProducts } from "../../context/Product-context";
 import { sortPriceFilter } from './../../reducer/FilterReducer';
 import { categoryFiltered } from './../Filters';
 import { useFilter } from "../../context/Filter-context";
+import { Filter } from "../Allcomps";
 
 const Products = () => {
   
@@ -23,7 +24,7 @@ const Products = () => {
 
   const user = localStorage.getItem("user")
 
-  const { state, dispatch } = useFilter()
+  const { state, setShowFilter } = useFilter()
 
   const categoryFilteredProduct = categoryFiltered(products, state, state.sortBy);
           
@@ -42,23 +43,10 @@ const Products = () => {
   return (
     <>
     <h2>All products</h2>
+    <button className="toggle-resp" onClick={() => setShowFilter(+true)}>Filters</button>
     <div className='product-page-content'>
 
-        <div className="left-container">
-          <h2>Filters</h2>
-          <button className="filter-btn" onClick={() => dispatch({type :"CLEAR_FILTER"})} >Clear All</button>
-
-          <div className="checkbox-container">
-            <span><input className='category-input' type="radio"  checked={ state.sortBy === "LOW_TO_HIGH"} onChange={() => dispatch({ type: "LOW_TO_HIGH"})}/>Price: Low to high </span>
-            <span><input className='category-input' type="radio"  checked={ state.sortBy === "HIGH_TO_LOW"} onChange={() => dispatch({ type: "HIGH_TO_LOW"})}/>Price: High to low</span>         
-
-          <h3>By category</h3>  
-            <span><input className='category-input' type="checkbox" checked={state.Analog} onChange={() => dispatch({type: "ANALOG"})} />Analog</span>
-            <span><input className='category-input' type="checkbox" checked={state.SmartWatch} onChange={() => dispatch({type: "SMARTWATCH"})}/>Smart</span>
-            <span><input className='category-input' type="checkbox" checked={state.Automatic} onChange={() => dispatch({type: "AUTOMATIC"})}/>Automatic</span>
-            <span><input className='category-input' type="checkbox" checked={state.Chronograph} onChange={() => dispatch({type: "CHRONOGRAPH"})}/>Chronograph</span>
-            </div>
-        </div>
+      <Filter/>
 
         <div className="card-container">
           {PriceWishFilter.map((item) => {
@@ -71,7 +59,6 @@ const Products = () => {
               discountPrice,
               badgeMessage,
               imageSrc,
-              inStock,
               rating,
             } = item;
             return (
@@ -82,9 +69,6 @@ const Products = () => {
                     <span className="card-badge bdg-card bdg-icon red">{badgeMessage}</span>
                   )}
                   <span className="hide dismiss-btn">{rating} <IcBaselineStar /> </span>
-                  <div className="hide overlay">
-                    {inStock ? "" : "out of stock"}
-                  </div>
                 </div>
 
                 <div className="card-about">
