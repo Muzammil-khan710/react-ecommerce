@@ -5,3 +5,15 @@
   background-color: var(--color-grey);
 }
 
+.svg {
+  height: 2rem;
+  width: 2rem;
+}
+
+
+@media screen and (max-width: 750px) {
+  .svg {
+    height: 1.6rem;
+    width: 1.6rem;
+  }
+}
