@@ -17,8 +17,6 @@ const Cart = () => {
         qty: 0
     })
 
-   
-
     useEffect(() =>{
         (() => {
             let totalPrice = 0;
