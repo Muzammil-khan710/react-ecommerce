@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { useAuth } from '../../context/Auth-context'
 import "./Login.css"
 
-const LoginPage = () => {
+const Login = () => {
 
   const { loginFunc } = useAuth()
 
@@ -26,7 +26,7 @@ const LoginPage = () => {
           <button className='btn d-grey btn-auth' onClick={(e) => { loginFunc(e, userEmail, userPassword);  console.log(`${userEmail} and ${userPassword}`)} }>Submit</button>
           <p className="t-cntr">or</p>
           </form>
-          <button onClick={() => { setUserEmail("testuser@gmail.com"); setUserPassword("testuser@123"); }}>Test credentials</button>
+          <button className='btn d-grey btn-test' onClick={() => { setUserEmail("testuser@gmail.com"); setUserPassword("testuser@123"); }}>Test credentials</button>
           <p>New here? <Link className=" link sign-up-link" to="/Signup">Sign-up</Link></p>
         </div>
       </div>
@@ -34,4 +34,4 @@ const LoginPage = () => {
   )
 }
 
-export { LoginPage }
+export { Login }

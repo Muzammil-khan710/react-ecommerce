@@ -2,12 +2,4 @@
     padding: 1rem;
     background-color: var(--color-dark-blue);
     color: var(--color-grey);
-    position: relative;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-}
-
-.footer-heading {
-    font-size: 2rem;
 }

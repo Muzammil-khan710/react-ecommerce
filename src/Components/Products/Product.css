@@ -30,15 +30,14 @@
   gap: 1rem;
 }
 
-.checkbox-container {
-  display: flex;
-  align-items: flex-start;
-  width: 10rem;
-  flex-direction: column;
-  margin: 10px;
-  gap: 1rem;
-}
-
 img {
   object-fit: cover;
+}
+
+@media screen and (max-width: 750px) {
+  
+  .card-container {
+    justify-content: center;
+  }
+
 }

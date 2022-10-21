@@ -1,18 +1,15 @@
 import "./App.css";
-import { Footer, Navbar, Homepage, LoginPage, SignupPage, CartPage, WishlistPage } from "./Components/Allcomps";
-import { ProductsPage } from "./Components/Products/ProductsPage";
 import { Routes, Route } from "react-router-dom"
 import Mockman from "mockman-js";
 import { Authroute } from './Components/Authroute';
 import { Privateroute } from "./Components/Privateroute";
-
+import { CartPage, HomePage, LoginPage, ProductsPage, SignupPage, WishlistPage } from "./pages/index";
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
       <Routes>
-        <Route path="/" element={<Homepage/>} />
+        <Route path="/" element={<HomePage/>} />
         <Route path="/mockman" element={<div className="MockAPI"><Mockman /></div>}/>
         <Route path="/products" element={<ProductsPage/>} />
 
@@ -26,7 +23,6 @@ function App() {
           <Route path="/wishlist" element={<WishlistPage/>} />
         </Route>
       </Routes>
-      <Footer />
     </div>
   );
 }
