@@ -13,7 +13,7 @@ const Wishlist = () => {
   return (
     <>
         {wishlistItems.length > 0 ? 
-        <div className='cart-container'>
+        <section className='cart-container'>
 
         <div className='left-cont'>
         {
@@ -36,7 +36,7 @@ const Wishlist = () => {
             ))
         }
         </div>
-       </div>
+       </section>
        : <h1>Your wishlist is empty ! Please add items from <Link to='/products' className='home-link'>Products</Link> </h1>
     }
    </>

@@ -15,7 +15,7 @@ const Signup = () => {
   })
   
   return (
-    <div>
+    <section>
         <h1>Signup to continue  </h1>
         <div className="signup-container">
         <div className="login-content">
@@ -35,7 +35,7 @@ const Signup = () => {
           <p>Already a customer? <Link className="link login-link" to="/Login">Log in</Link></p>
         </div>
     </div>
-    </div>
+    </section>
   )
 }
 

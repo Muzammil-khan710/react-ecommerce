@@ -15,7 +15,7 @@ const Navbar = () => {
   const { user, logoutFunc } = useAuth()
  
   return (
-    <div className='nav-content'>
+    <nav className='nav-content'>
       <Link className='brand-name link' to="/">MyWatch</Link>
        <div className='icon-container'>
          <Link className='link-product'to='/products'>Products</Link>
@@ -28,7 +28,7 @@ const Navbar = () => {
          (<Link className='nav-btn' to='/login'><Logout/></Link>)
           }
        </div>
-    </div>
+    </nav>
   )
 }
 

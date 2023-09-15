@@ -48,7 +48,7 @@ const Products = () => {
 
       <Filter/>
 
-        <div className="card-container">
+        <section className="card-container">
           {PriceWishFilter.map((item) => {
             const {
               id,
@@ -64,7 +64,7 @@ const Products = () => {
             return (
               <div className="card" key={id}>
                 <div className="card-picture">
-                  <LazyLoadImage className="card-img" src={imageSrc}  alt={name} effect="blur" />
+                  <LazyLoadImage className="product-card-img" src={imageSrc}  alt={name} effect="blur" />
                   {hasOffer && (
                     <span className="card-badge bdg-card bdg-icon red">{badgeMessage}</span>
                   )}
@@ -112,7 +112,7 @@ const Products = () => {
               </div>
             );
           })}
-        </div>
+        </section>
 
     </div>
     </>

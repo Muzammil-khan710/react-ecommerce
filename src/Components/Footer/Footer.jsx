@@ -3,9 +3,9 @@ import "./Footer.css"
 
 const Footer = () => {
     return(
-        <div className="footer">
+        <footer className="footer">
             <div>Made with ❤️ by Muzammil</div>
-        </div>
+        </footer>
     )
 }
 

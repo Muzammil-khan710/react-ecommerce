@@ -8,7 +8,7 @@ const Filter = () => {
 
   return (
     <>
-         <div className= { showFilter ? "left-container" : "left-container left-container-resp"}>
+         <section className= { showFilter ? "left-container" : "left-container left-container-resp"}>
           <button className="resp-close-btn" onClick={() => setShowFilter(+false)}>close</button>
           <h2>Filters</h2>
           <button className="filter-btn" onClick={() => dispatch({type :"CLEAR_FILTER"})} >Clear All</button>
@@ -23,7 +23,7 @@ const Filter = () => {
             <span><input className='category-input' type="checkbox" checked={state.Automatic} onChange={() => dispatch({type: "AUTOMATIC"})}/>Automatic</span>
             <span><input className='category-input' type="checkbox" checked={state.Chronograph} onChange={() => dispatch({type: "CHRONOGRAPH"})}/>Chronograph</span>
             </div>
-        </div>
+        </section>
     </>
   )
 }
