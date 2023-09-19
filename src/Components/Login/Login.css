@@ -1,0 +1,15 @@
+.login-container {
+    margin: 2rem 0rem 4rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-content {
+    border: 1px solid;
+    padding: 2rem;
+}
+
+.btn-test {
+    width: 80%;
+}

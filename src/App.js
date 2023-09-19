@@ -1,43 +1,31 @@
 import "./App.css";
-import logo from "./logo.png";
+import { Routes, Route } from "react-router-dom"
+import Mockman from "mockman-js";
+import { Authroute } from './Components/Authroute';
+import { Privateroute } from "./Components/Privateroute";
+import { CartPage, HomePage, LoginPage, ProductsPage, SignupPage, WishlistPage } from "./pages/index";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} alt="mockBee logo" width="180" height="180" />
-        <h1 className="brand-title">
-          Welcome to <span>mockBee!</span>
-        </h1>
-        <p className="brand-description">
-          Get started by editing <code>src/App.js</code>
-        </p>
-        <div className="links">
-          <a
-            href="https://mockbee.netlify.app/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Explore mockBee
-          </a>
-          <a
-            href="https://mockbee.netlify.app/docs/api/introduction"
-            target="_blank"
-            rel="noreferrer"
-          >
-            API Documentation
-          </a>
-          <a
-            href="https://github.com/neogcamp/mockBee"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Contribute
-          </a>
-        </div>
-      </header>
+      <Routes>
+        <Route path="/" element={<HomePage/>} />
+        <Route path="/mockman" element={<div className="MockAPI"><Mockman /></div>}/>
+        <Route path="/products" element={<ProductsPage/>} />
+
+        <Route element={<Authroute/>}>
+          <Route path="/Login" element={<LoginPage/>} />
+          <Route path="/Signup" element={<SignupPage/>} />
+        </Route>
+
+        <Route element={<Privateroute/>}>
+          <Route path="/cart" element={<CartPage/>} />
+          <Route path="/wishlist" element={<WishlistPage/>} />
+        </Route>
+      </Routes>
     </div>
   );
 }
 
 export default App;
+
