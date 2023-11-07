@@ -11,6 +11,7 @@
     align-items: center;
     justify-content: center;
     padding-bottom: 1rem;
+    width: 100%;
 }
 
 .explore-link {
@@ -63,4 +64,9 @@
     .explore-link {
         padding: 0.5rem 1.5rem;
     }
+}
+
+.banner-image {
+    max-height: 100vh;
+    width: 100vw;
 }
