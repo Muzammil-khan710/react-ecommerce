@@ -5,7 +5,7 @@ const Layout = ({ children, className }) => {
   return (
     <React.Fragment>
       <Navbar />
-      <main className={className}>{children}</main>
+      <main className={`main ${className ? className : ''}`}>{children}</main>
       <Footer />
     </React.Fragment>
   );

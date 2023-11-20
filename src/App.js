@@ -1,4 +1,4 @@
-import "./App.css";
+import "./main.css";
 import { Routes, Route } from "react-router-dom"
 import Mockman from "mockman-js";
 import { Authroute } from './Components/Authroute';

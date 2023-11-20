@@ -48,12 +48,12 @@ const Navbar = () => {
 
         {user ? (
           <Link className="nav-btn" onClick={logoutFunc} to="/login">
-            <span>{user.firstName}</span>
+            <span>Logout</span>
             <Login />
           </Link>
         ) : (
           <Link className="nav-btn" to="/login">
-            <span>login</span>
+            <span>Login</span>
             <Logout />
           </Link>
         )}
