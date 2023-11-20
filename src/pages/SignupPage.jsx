@@ -1,14 +1,12 @@
-import React from 'react'
-import { Footer, Navbar, Signup } from '../Components/Allcomps'
+import React from "react";
+import { Layout, Signup } from "../Components/Allcomps";
 
 const SignupPage = () => {
   return (
-    <div className='page-one'>
-        <Navbar/>
-        <Signup/>
-        <Footer/>
-    </div>
-  )
-}
+    <Layout>
+      <Signup />
+    </Layout>
+  );
+};
 
-export { SignupPage }
+export { SignupPage };

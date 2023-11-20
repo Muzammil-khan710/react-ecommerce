@@ -1,13 +1,11 @@
 import React from 'react'
-import { Footer, Home, Navbar } from '../Components/Allcomps'
+import { Home, Layout } from '../Components/Allcomps'
 
 const HomePage = () => {
   return (
-    <div className='page-one'>
-        <Navbar/>
-        <Home/>
-        <Footer/>
-    </div>
+    <Layout>
+      <Home/>
+    </Layout>
   )
 }
 

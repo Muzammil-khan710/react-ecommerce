@@ -1,13 +1,11 @@
 import React from 'react'
-import { Footer, Navbar, Wishlist } from '../Components/Allcomps'
+import { Layout, Wishlist } from '../Components/Allcomps'
 
 const WishlistPage = () => {
   return (
-    <div className='page-one'>
-        <Navbar/>
-        <Wishlist/>
-        <Footer/>
-    </div>
+    <Layout>
+      <Wishlist/>
+    </Layout>
   )
 }
 

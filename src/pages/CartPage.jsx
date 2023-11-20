@@ -1,15 +1,11 @@
-import React from 'react'
-import { Cart, Footer, Navbar } from '../Components/Allcomps'
-import './pages.css'
+import { Cart, Layout } from "../Components/Allcomps";
 
 const CartPage = () => {
   return (
-    <div className='page-one'>
-        <Navbar/>
-        <Cart/>
-        <Footer/>
-    </div>
-  )
-}
+    <Layout>
+      <Cart />
+    </Layout>
+  );
+};
 
-export { CartPage }
+export { CartPage };

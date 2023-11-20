@@ -1,14 +1,12 @@
-import React from 'react'
-import { Footer, Navbar, Products } from '../Components/Allcomps'
+import React from "react";
+import { Layout, Products } from "../Components/Allcomps";
 
 const ProductsPage = () => {
   return (
-    <div className='page-one'>
-        <Navbar/>
-        <Products/>
-        <Footer/>
-    </div>
-  )
-}
+    <Layout>
+      <Products />
+    </Layout>
+  );
+};
 
-export { ProductsPage }
+export { ProductsPage };

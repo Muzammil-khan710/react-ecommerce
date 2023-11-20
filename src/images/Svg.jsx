@@ -2,13 +2,13 @@ import React from 'react';
 
 const ShoppingCartIcon = (props) => {
   return (
-    <svg className='svg' width="1.2rem" height="1.2rem" viewBox="0 0 24 24" {...props}><path fill="#dde7e5" d="M17 18c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2s2-.9 2-2s-.9-2-2-2zM7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2s-.9-2-2-2zm0-3l1.1-2h7.45c.75 0 1.41-.41 1.75-1.03L21.7 4H5.21l-.94-2H1v2h2l3.6 7.59L3.62 17H19v-2H7z"></path></svg>    
+    <svg className='svg' width="1.2rem" height="1.2rem" viewBox="0 0 24 24" {...props}><path fill="currentColor" d="M17 18c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2s2-.9 2-2s-.9-2-2-2zM7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2s-.9-2-2-2zm0-3l1.1-2h7.45c.75 0 1.41-.41 1.75-1.03L21.7 4H5.21l-.94-2H1v2h2l3.6 7.59L3.62 17H19v-2H7z"></path></svg>    
   )
 }
 
 const WishlistIcon = (props) => {
   return (
-    <svg className='svg' width="1.2rem" height="1.2rem" viewBox="0 0 256 256" {...props}><path fill="#dde7e5" d="M236 92c0 30.6-17.7 62-52.6 93.4a314.3 314.3 0 0 1-51.5 37.6a8.1 8.1 0 0 1-7.8 0C119.8 220.6 20 163.9 20 92a60 60 0 0 1 108-36a60 60 0 0 1 108 36Z"></path></svg>
+    <svg className='svg' width="1.2rem" height="1.2rem" viewBox="0 0 256 256" {...props}><path fill="currentColor" d="M236 92c0 30.6-17.7 62-52.6 93.4a314.3 314.3 0 0 1-51.5 37.6a8.1 8.1 0 0 1-7.8 0C119.8 220.6 20 163.9 20 92a60 60 0 0 1 108-36a60 60 0 0 1 108 36Z"></path></svg>
     )
 }
 
