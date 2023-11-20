@@ -13,7 +13,8 @@ import OnePlusSmartWatch from "./Assets/OnePlusSmartWatch.webp"
 import RadoAnalogWatch from "./Assets/RadoAnalogWatch.webp"
 import RiderAnalogWatch from "./Assets/RiderAnalogWatch.webp"
 import SeikoAutomaticWatch from "./Assets/SeikoAutomaticWatch.webp"
+import BannerImg from "./Assets/mywatch-banner.webp"
 
 export { HomeImg , AnalogWatch, AutomaticWatch, ChronographWatch, SmartWatch, ArmaniAnalogWatch, ArmaniChronoWatch , 
 BovetAutomaticWatch , CasioChronoWatch , HrxSmartWatch , MiSmartWatch , OnePlusSmartWatch , RadoAnalogWatch , RiderAnalogWatch , 
-SeikoAutomaticWatch  }
+SeikoAutomaticWatch, BannerImg  }

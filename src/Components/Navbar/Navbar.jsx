@@ -29,7 +29,7 @@ const Navbar = () => {
       </Link>
       <div className="icon-container">
         <Link className="link-product" to="/products">
-          Products
+          <span>Products</span>
         </Link>
         <Link className="link-product" to="/cart">
           <span>Cart</span>
@@ -53,6 +53,7 @@ const Navbar = () => {
           </Link>
         ) : (
           <Link className="nav-btn" to="/login">
+            <span>login</span>
             <Logout />
           </Link>
         )}

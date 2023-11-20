@@ -2,20 +2,19 @@ import React from "react";
 import {
   AnalogWatch,
   AutomaticWatch,
+  BannerImg,
   ChronographWatch,
-  HomeImg,
   SmartWatch,
 } from "../../images/ImageExp";
-import "./Home.css";
 import { FeaturedProducts } from "./FeaturedProducts";
-import { Banner } from "./Banner";
+import { Banner } from "../Banner/Banner";
 
 const Home = () => {
   return (
     <React.Fragment>
       <Banner
         title="Exclusive offer upto 50% off"
-        img={HomeImg}
+        img={BannerImg}
         alt="banner"
         link="products"
       />

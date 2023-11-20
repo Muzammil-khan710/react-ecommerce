@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useFilter } from "../../context/Filter-context";
-import "./Home.css"
 
 const FeaturedProducts = ({ src, title, category }) => {
 
