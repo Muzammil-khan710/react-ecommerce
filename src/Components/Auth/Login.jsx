@@ -14,7 +14,7 @@ const Login = () => {
     <section className="auth-wrapper">
       <AuthBanner />
       <div className="auth-container">
-        <h2 className="auth-title">Log in</h2>
+        <div className="auth-title">Log in</div>
         <form className="form">
           <label className="form-label">
             Enter your email
