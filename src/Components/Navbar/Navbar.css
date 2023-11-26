@@ -30,7 +30,7 @@
 }
 
 .brand-name:hover, .link-product:hover, .nav-btn:hover {
-    color: var(--color-primary-hover);
+    color: var(--color-light-gray);
 }
 
 @media screen and (max-width:600px) {

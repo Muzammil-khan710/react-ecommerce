@@ -11,7 +11,7 @@
   --bg-secondary: #d0e4fe;
   --bg-secondary-hover: #b4c7ff;
   --color-primary: #dedddd;
-  --color-primary-hover: #a8a4a4;
+  --color-light-gray: #a8a4a4;
   --color-dark:#212121;
   --color-blue: #3750D2;
   --color-blue-dark:#2741d5;
@@ -26,10 +26,16 @@ body {
   font-family: 'Inter',sans-serif;
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
+
 .App {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background: #f0f0f0 ;
 }
 
 .main {
@@ -52,4 +58,8 @@ body {
 
 .margin-top-lg {
   margin-top: 30px;
+}
+
+.color-black {
+  color: var(--color-dark);
 }

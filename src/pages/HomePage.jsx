@@ -1,10 +1,17 @@
 import React from 'react'
-import { Home, Layout } from '../Components/Allcomps'
+import { Banner, FeaturedCategories, Layout } from '../Components/Allcomps'
+import { BannerImg } from '../images/ImageExp'
 
 const HomePage = () => {
   return (
     <Layout>
-      <Home/>
+      <Banner
+        title="Exclusive offer upto 50% off"
+        img={BannerImg}
+        alt="banner"
+        link="products"
+      />
+      <FeaturedCategories/>
     </Layout>
   )
 }
