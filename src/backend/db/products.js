@@ -1,152 +1,230 @@
-import { v4 as uuid } from "uuid";
-
 /**
  * Product Database can be added here.
  * You can add products of your wish with different attributes
  * */
- import { ArmaniAnalogWatch, ArmaniChronoWatch, BovetAutomaticWatch, CasioChronoWatch, HrxSmartWatch, MiSmartWatch, OnePlusSmartWatch, RadoAnalogWatch, RiderAnalogWatch, SeikoAutomaticWatch} from "../../images/ImageExp"
+ import {AmazfitGtr, AmazfitGts, CasioBlue, CasioBrown, CasioWhite, FossilBlack, PoliceBlue, FossilGreen, FossilBlue, PoliceBlack, PoliceGolden} from "../../images/ImageExp"
 
 
 export const products = [
   {
-    _id: uuid(),
-    name: "Casio Chronograph Watch",
-    originalPrice: 15000,
-    hasOffer: true,
-    hasDiscount: true,
-    discountPrice: 9000,
-    badgeMessage: "40% off",
-    imageSrc: CasioChronoWatch,
+    _id: 'fossil-green-analog-watch-010',
+    name: "Fossil Green Analog Watch",
+    brand: 'Fossil',
+    originalPrice: 19995,
+    discountPrice: 13996,
+    imageSrc: FossilGreen,
+    inStock: true,
+    fastDelivery: true,
+    categoryName: "Analog",
+    rating: 4.7,
+		bestseller: true,
+		features:[
+      '10.3 mm case thickness',
+      'Ceramic band material',
+      '36 mm case diameter',
+      'Upto 100 meters water resistant depth'
+    ],
+		description: 'This 36mm FB-01 watch features a green glossy dial, three-hand movement and green ceramic bracelet.'
+  },
+  {
+    _id: 'fossil-black-analog-watch-012',
+    name: "Fossil Black Analog Watch",
+    brand: 'Fossil',
+    originalPrice: 13495,
+    discountPrice: 8097,
+    imageSrc: FossilBlack,
+    inStock: true,
+    fastDelivery: true,
+    categoryName: "Analog",
+    rating: 4,
+		bestseller: false,
+		features:[
+      '12 mm case thickness',
+      'Stainless steel band material',
+      '42 mm case diameter',
+      'Upto 100 meters water resistant depth'
+    ],
+		description: 'This 42mm Fossil Blue watch features a black sunray dial, three-hand date movement and two-tone stainless steel bracelet.'
+  },
+  {
+    _id: 'fossil-blue-chronograph-watch-013',
+    name: "Fossil Blue Chronograph Watch",
+    brand: 'Fossil',
+    originalPrice: 13495,
+    discountPrice: 8097,
+    imageSrc: FossilBlue,
     inStock: true,
     fastDelivery: true,
     categoryName: "Chronograph",
-    rating: 4.8
+    rating: 3,
+		bestseller: true,
+		features:[
+      '12 mm case thickness',
+      'Leather band material',
+      '44 mm case diameter',
+      'Upto 50 meters water resistant depth'
+    ],
+		description: 'The Neutra Chrono gift set features a blue satin dial with roman numerals at the 12 and 6 hr mark, chronograph movement and a brown leather strap for a bold, one-of-a-kind look.'
   },
   {
-    _id: uuid(),
-    name: "Armani Chronograph watch",
-    originalPrice: 20000,
-    hasOffer: true,
-    hasDiscount: true,
-    discountPrice: 15000,
-    badgeMessage: "30% off",
-    imageSrc: ArmaniChronoWatch,
+    _id: 'police-black-analog-watch-014',
+    name: "Police Black Analog Watch",
+    brand: 'Police',
+    originalPrice: 12995,
+    discountPrice: 9096,
+    imageSrc: PoliceBlack,
+    inStock: true,
+    fastDelivery: true,
+    categoryName: "Analog",
+    rating: 4.8,
+		bestseller: true,
+		features:[
+      '12 mm case thickness',
+      'Stainless steel band material',
+      '43 mm case diameter',
+      'Upto 50 meters water resistant depth'
+    ],
+		description: 'Police Mens 43 mm Urban Rebel Black Dial Stainless Steel Analog Watch'
+  },
+  {
+    _id: 'police-golden-analog-watch-015',
+    name: "Police Golden Analog Watch",
+    brand: 'Police',
+    originalPrice: 12995,
+    discountPrice: 9096,
+    imageSrc: PoliceGolden,
+    inStock: true,
+    fastDelivery: true,
+    categoryName: "Analog",
+    rating: 4,
+		bestseller: true,
+		features:[
+      '10 mm case thickness',
+      'Leather band material',
+      '45 mm case diameter',
+      'Upto 50 meters water resistant depth'
+    ],
+		description: 'Police Mens 45 mm Urban Rebel Gun Dial Leather Analog Watch'
+  },
+  {
+    _id: 'police-blue-analog-watch-016',
+    name: "Police Blue Analog Watch",
+    brand: 'Police',
+    originalPrice: 9195,
+    discountPrice: 5517,
+    imageSrc: PoliceBlue,
+    inStock: true,
+    fastDelivery: true,
+    categoryName: "Analog",
+    rating: 3.5,
+		bestseller: false,
+		features:[
+      '10 mm case thickness',
+      'Leather band material',
+      '45 mm case diameter',
+      'Upto 50 meters water resistant depth'
+    ],
+		description: ' The trendy bracelet strap of this watch is crafted from metallic material for durability, while its round dial ups the style quotient. '
+  },
+  {
+    _id: 'casio-white-chronograph-watch-017',
+    name: "Casio White Chronograph Watch",
+    brand: 'Casio',
+    originalPrice: 13995,
+    discountPrice: 8397,
+    imageSrc: CasioWhite,
     inStock: true,
     fastDelivery: true,
     categoryName: "Chronograph",
-    rating: 3.1
+    rating: 4,
+		bestseller: true,
+		features:[
+      '12 mm case thickness',
+      'Stainless steel band material',
+      '50 mm case diameter',
+      'Upto 100 meters water resistant depth'
+    ],
+		description: 'Fashioned with a two-toned dial and strap, it ensures a chic vibe. Further adding to the utility is its water resisting capacity up to 100 meters.'
   },
   {
-    _id: uuid(),
-    name: "Mi band 5",
-    originalPrice: 6500,
-    hasOffer: true,
-    hasDiscount: true,
-    discountPrice: 4500,
-    badgeMessage: "30% off",
-    imageSrc: MiSmartWatch,
+    _id: 'casio-blue-chronograph-watch-018',
+    name: "Casio Blue Chronograph Watch",
+    brand: 'Casio',
+    originalPrice: 11995,
+    discountPrice: 8396,
+    imageSrc: CasioBlue,
     inStock: true,
     fastDelivery: true,
-    categoryName: "SmartWatch",
-    rating: 5.0
+    categoryName: "Chronograph",
+    rating: 3.9,
+		bestseller: true,
+		features:[
+      '14 mm case thickness',
+      'Stainless steel band material',
+      '42 mm case diameter',
+      'Upto 100 meters water resistant depth'
+    ],
+		description: 'Featuring a round dial, it also sports three sub dials that not only enhance its appeal but also perform multiple tasks at the same time.'
   },
   {
-    _id: uuid(),
-    name: "HRX smart watch ",
-    originalPrice: 7000,
-    hasOffer: true,
-    hasDiscount: true,
-    discountPrice: 5900,
-    badgeMessage: "30% off",
-    imageSrc: HrxSmartWatch,
+    _id: 'casio-brown-chronograph-watch-019',
+    name: "Casio Brown Chronograph Watch",
+    brand: 'Casio',
+    originalPrice: 9995,
+    discountPrice: 6996,
+    imageSrc: CasioBrown,
     inStock: true,
     fastDelivery: true,
-    categoryName: "SmartWatch",
-    rating: 3.9
+    categoryName: "Chronograph",
+    rating: 4.2,
+		bestseller: true,
+		features:[
+      '12 mm case thickness',
+      'Leather band material',
+      '48 mm case diameter',
+      'Upto 100 meters water resistant depth'
+    ],
+		description: ' The brown dial with roman markers and stylish hands in a contrasting shade lend it a smart look that will complement your casual wear.'
   },
   {
-    _id: uuid(),
-    name: "Oneplus smart watch",
-    originalPrice: 20000,
-    hasOffer: true,
-    hasDiscount: true,
-    discountPrice: 18000,
-    badgeMessage: "30% off",
-    imageSrc: OnePlusSmartWatch,
+    _id: 'amazfit-gtr-2-smartwatch-020',
+    name: "Amazfit GTR 2 SmartWatch",
+    brand: 'Amazfit',
+    originalPrice: 13499,
+    discountPrice: 10000,
+    imageSrc: AmazfitGtr,
     inStock: true,
     fastDelivery: true,
-    categoryName: "SmartWatch",
-    rating: 4.0
+    categoryName: "Smartwatch",
+    rating: 4.5,
+		bestseller: true,
+		features:[
+      '12 mm case thickness',
+      'Leather band material',
+      '46 mm case diameter',
+      'Upto 50 meters water resistant depth'
+    ],
+		description: ' 1.39 Inches HD Amoled Display With 454 X 454 Resolution, 3D Gorilla Glass 3 + Anti-Fingerprint Coating And Odlc Coating.'
   },
   {
-    _id: uuid(),
-    name: "Rider analog watch",
-    originalPrice: 25000,
-    hasOffer: true,
-    hasDiscount: true,
-    discountPrice: 19900,
-    badgeMessage: "40% off",
-    imageSrc: RiderAnalogWatch,
+    _id: 'amazfit-gts-3-smartwatch-021',
+    name: "Amazfit GTS 3 SmartWatch",
+    brand: 'Amazfit',
+    originalPrice: 13999,
+    discountPrice: 11000,
+    imageSrc: AmazfitGts,
     inStock: true,
     fastDelivery: true,
-    categoryName: "Analog",
-    rating: 2.5
+    categoryName: "Smartwatch",
+    rating: 4.2,
+		bestseller: true,
+		features:[
+      '12 mm case thickness',
+      'Leather band material',
+      '42 mm case diameter',
+      'Upto 50 meters water resistant depth'
+    ],
+		description: '1.75-Inch Square Ultra HD Amoled Display With 341 Ppi Screen Of The Amazfit Gts 3 Shows You Exactly What You Want, When You Want It, And Is Visible Even Under Bright Sunlight With 72.4% Screen-To-Body Ratio And Peak Brightness Of 1000 Nits. '
   },
-  {
-    _id: uuid(),
-    name: "Armani analog watch",
-    originalPrice: 30000,
-    hasOffer: true,
-    hasDiscount: true,
-    discountPrice: 15000,
-    badgeMessage: "50% off",
-    imageSrc: ArmaniAnalogWatch,
-    inStock: true,
-    fastDelivery: true,
-    categoryName: "Analog",
-    rating: 3.0
-  },
-  {
-    _id: uuid(),
-    name: "Rado analog watch",
-    originalPrice: 40000,
-    hasOffer: true,
-    hasDiscount: true,
-    discountPrice: 30000,
-    badgeMessage: "20% off",
-    imageSrc: RadoAnalogWatch,
-    inStock: true,
-    fastDelivery: true,
-    categoryName: "Analog",
-    rating: 4.6
-  },
-  {
-    _id: uuid(),
-    name: "Bovet automatic watch",
-    originalPrice: 45000,
-    hasOffer: true,
-    hasDiscount: true,
-    discountPrice: 40000,
-    badgeMessage: "15% off",
-    imageSrc: BovetAutomaticWatch,
-    inStock: true,
-    fastDelivery: true,
-    categoryName: "Automatic",
-    rating: 4.9
-  },
-  {
-    _id: uuid(),
-    name: "Seiko automatic watch",
-    originalPrice: 35000,
-    hasOffer: true,
-    hasDiscount: true,
-    discountPrice: 20000,
-    badgeMessage: "25% off",
-    imageSrc: SeikoAutomaticWatch,
-    inStock: true,
-    fastDelivery: true,
-    categoryName: "Automatic",
-    rating: 4.0
-  }
 ]
  

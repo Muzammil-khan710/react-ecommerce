@@ -1,21 +1,15 @@
-import HomeImg from "./Assets/HomeImg.webp"
-import AnalogWatch from "./Assets/AnalogWatch.webp"
-import AutomaticWatch from "./Assets/AutomaticWatch.webp"
-import ChronographWatch from "./Assets/ChronographWatch.webp"
-import SmartWatch from "./Assets/SmartWatch.webp"
-import ArmaniAnalogWatch from "./Assets/ArmaniAnalogWatch.webp"
-import ArmaniChronoWatch from "./Assets/ArmaniChronoWatch.webp"
-import BovetAutomaticWatch from "./Assets/BovetAutomaticWatch.webp"
-import CasioChronoWatch from "./Assets/CasioChronoWatch.webp"
-import HrxSmartWatch from "./Assets/HrxSmartWatch.webp"
-import MiSmartWatch from "./Assets/MiSmartWatch.webp"
-import OnePlusSmartWatch from "./Assets/OnePlusSmartWatch.webp"
-import RadoAnalogWatch from "./Assets/RadoAnalogWatch.webp"
-import RiderAnalogWatch from "./Assets/RiderAnalogWatch.webp"
-import SeikoAutomaticWatch from "./Assets/SeikoAutomaticWatch.webp"
 import BannerImg from "./Assets/mywatch-banner.webp"
 import AuthImg from "./Assets/Auth.webp"
+import AmazfitGtr from './Assets/amazfit-gtr.webp'
+import AmazfitGts from './Assets/amazfit-gts.webp'
+import CasioBlue from './Assets/casio-blue.webp'
+import CasioBrown from './Assets/casio-brown.webp'
+import CasioWhite from './Assets/casio-white.webp'
+import FossilBlack from './Assets/fossil-black.webp'
+import FossilBlue from './Assets/fossil-blue.webp'
+import FossilGreen from './Assets/fossil-green.webp'
+import PoliceBlack from './Assets/police-black.webp'
+import PoliceBlue from './Assets/police-blue.webp'
+import PoliceGolden from './Assets/police-golden.webp'
 
-export { HomeImg , AnalogWatch, AutomaticWatch, ChronographWatch, SmartWatch, ArmaniAnalogWatch, ArmaniChronoWatch , 
-BovetAutomaticWatch , CasioChronoWatch , HrxSmartWatch , MiSmartWatch , OnePlusSmartWatch , RadoAnalogWatch , RiderAnalogWatch , 
-SeikoAutomaticWatch, BannerImg, AuthImg  }
+export { BannerImg, AuthImg, AmazfitGtr, AmazfitGts, CasioBlue, CasioBrown, CasioWhite, FossilBlack, FossilBlue, FossilGreen, PoliceBlack, PoliceBlue, PoliceGolden }

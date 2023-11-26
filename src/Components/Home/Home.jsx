@@ -1,10 +1,6 @@
 import React from "react";
 import {
-  AnalogWatch,
-  AutomaticWatch,
   BannerImg,
-  ChronographWatch,
-  SmartWatch,
 } from "../../images/ImageExp";
 import { FeaturedProducts } from "./FeaturedProducts";
 import { Banner } from "../Banner/Banner";
@@ -18,7 +14,7 @@ const Home = () => {
         alt="banner"
         link="products"
       />
-      <section className="category-container">
+      {/* <section className="category-container">
         <h2>Available Categories</h2>
         <div className="featured-product-type">
           <FeaturedProducts
@@ -42,7 +38,7 @@ const Home = () => {
             category="SMARTWATCH"
           />
         </div>
-      </section>
+      </section> */}
     </React.Fragment>
   );
 };
