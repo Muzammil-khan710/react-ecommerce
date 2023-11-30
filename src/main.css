@@ -15,7 +15,13 @@
   --color-dark:#212121;
   --color-blue: #3750D2;
   --color-blue-dark:#2741d5;
-  --color-white:#fff
+  --color-white:#fff;
+  --color-orange: #FF6B35;
+  --color-red: red;
+
+  --font-sm: 0.875rem;
+  --font-x-sm: 0.6rem;
+  --font-base:1rem;
 }
 
 a {
@@ -62,4 +68,8 @@ img {
 
 .color-black {
   color: var(--color-dark);
+}
+
+.color-red {
+  color: var(--color-red);
 }

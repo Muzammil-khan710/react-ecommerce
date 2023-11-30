@@ -17,7 +17,7 @@ export const products = [
     fastDelivery: true,
     categoryName: "Analog",
     rating: 4.7,
-		bestseller: true,
+		label: 'Bestseller',
 		features:[
       '10.3 mm case thickness',
       'Ceramic band material',
@@ -37,7 +37,7 @@ export const products = [
     fastDelivery: true,
     categoryName: "Analog",
     rating: 4,
-		bestseller: false,
+		label: 'Bestseller',
 		features:[
       '12 mm case thickness',
       'Stainless steel band material',
@@ -57,7 +57,7 @@ export const products = [
     fastDelivery: true,
     categoryName: "Chronograph",
     rating: 3,
-		bestseller: true,
+		label: 'New Arrival',
 		features:[
       '12 mm case thickness',
       'Leather band material',
@@ -77,7 +77,7 @@ export const products = [
     fastDelivery: true,
     categoryName: "Analog",
     rating: 4.8,
-		bestseller: true,
+		label: 'Bestseller',
 		features:[
       '12 mm case thickness',
       'Stainless steel band material',
@@ -97,7 +97,6 @@ export const products = [
     fastDelivery: true,
     categoryName: "Analog",
     rating: 4,
-		bestseller: true,
 		features:[
       '10 mm case thickness',
       'Leather band material',
@@ -117,7 +116,6 @@ export const products = [
     fastDelivery: true,
     categoryName: "Analog",
     rating: 3.5,
-		bestseller: false,
 		features:[
       '10 mm case thickness',
       'Leather band material',
@@ -137,7 +135,6 @@ export const products = [
     fastDelivery: true,
     categoryName: "Chronograph",
     rating: 4,
-		bestseller: true,
 		features:[
       '12 mm case thickness',
       'Stainless steel band material',
@@ -157,7 +154,7 @@ export const products = [
     fastDelivery: true,
     categoryName: "Chronograph",
     rating: 3.9,
-		bestseller: true,
+		label: 'New Arrival',
 		features:[
       '14 mm case thickness',
       'Stainless steel band material',
@@ -177,7 +174,7 @@ export const products = [
     fastDelivery: true,
     categoryName: "Chronograph",
     rating: 4.2,
-		bestseller: true,
+		label: 'Bestseller',
 		features:[
       '12 mm case thickness',
       'Leather band material',
@@ -197,7 +194,7 @@ export const products = [
     fastDelivery: true,
     categoryName: "Smartwatch",
     rating: 4.5,
-		bestseller: true,
+		label: 'Bestseller',
 		features:[
       '12 mm case thickness',
       'Leather band material',
@@ -217,7 +214,6 @@ export const products = [
     fastDelivery: true,
     categoryName: "Smartwatch",
     rating: 4.2,
-		bestseller: true,
 		features:[
       '12 mm case thickness',
       'Leather band material',
