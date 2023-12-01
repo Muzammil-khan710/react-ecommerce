@@ -1,46 +1,37 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
-import { useCart } from '../../context/Cart-context';
-import { useWishlist } from '../../context/Wishlist-context';
-import "./Wishlist.css"
+import React from "react";
+import { Link } from "react-router-dom";
+import { useWishlist } from "../../context/Wishlist-context";
+import "./Wishlist.css";
+import { Card } from "../Allcomps";
 
 const Wishlist = () => {
-
-    const { wishlistState: {wishlistItems}, removeFromWishlist } = useWishlist();
-    
-    const { addToCart } = useCart();
+  const {
+    wishlistState: { wishlistItems },
+  } = useWishlist();
 
   return (
     <>
-        {wishlistItems.length > 0 ? 
-        <section className='cart-container'>
+      <section className="common-card-container">
+        {wishlistItems.length > 0 ? (
+          <>
+            <h1>Your Wishlist</h1>
+            <div className="wishlist-wrapper">
+              {wishlistItems.map((item) => (
+                <Card item={item} changeDirection={true} key={item._id} />
+              ))}
+            </div>
+          </>
+        ) : (
+          <h1>
+            Your wishlist is empty ! Please add items from{" "}
+            <Link to="/products" className="home-link">
+              Products
+            </Link>{" "}
+          </h1>
+        )}
+      </section>
+    </>
+  );
+};
 
-        <div className='left-cont'>
-        {
-            wishlistItems.map((item) => (
-                <div className="card-cart" key={item._id}>
-                    <div className="horizontal-card">
-                        <img className="horizontal-card-img" src={item.imageSrc} alt={item.name}/>
-                            <div className="horizontal-card-contents spc-ar">
-                            <h3>{item.name}</h3>
-                   
-                            <div className="crd-btn">
-                            <button className="btn outline-red" onClick={() => removeFromWishlist(item._id) }>Remove from Wishlist</button>
-
-                            <button className="btn outline-green" onClick={() => { removeFromWishlist(item._id); addToCart(item) } }>Add to Cart</button>
-                        </div>
-                        </div>  
-                    </div>
-                </div>
-                    
-            ))
-        }
-        </div>
-       </section>
-       : <h1>Your wishlist is empty ! Please add items from <Link to='/products' className='home-link'>Products</Link> </h1>
-    }
-   </>
-  )
-}
-
-export { Wishlist }
+export { Wishlist };

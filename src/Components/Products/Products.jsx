@@ -22,22 +22,26 @@ const Products = () => {
     state.sortBy
   );
 
+  console.log(PriceWishFilter)
+
   return (
-    <section>
-      <h2>All products</h2>
+    <React.Fragment>
       <button className="toggle-resp" onClick={() => setShowFilter(+true)}>
         Filters
       </button>
       <div className="product-page-content">
         <Filter />
 
-        <div className="card-container">
+        <section className="common-card-container">
+        <h2>All products</h2>
+        <div className="card-wrapper">
           {PriceWishFilter.map((item) => (
-            <Card item={item} key={item.id} />
+            <Card item={item} key={item.id} className="card-hover"/>
           ))}
-        </div>
+          </div>
+        </section>
       </div>
-    </section>
+    </React.Fragment>
   );
 };
 

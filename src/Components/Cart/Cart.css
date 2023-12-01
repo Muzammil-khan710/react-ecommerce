@@ -74,10 +74,6 @@
     justify-content: center;
 }
 
-.home-link {
-    color: var(--color-dark-blue);
-}
-
 @media screen and (max-width : 950px) {
     .cart-container {
         flex-direction: column;

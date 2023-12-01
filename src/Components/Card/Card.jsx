@@ -1,11 +1,15 @@
-import { IcBaselineStar, WishlistIconTwo } from "../../images/Svg";
+import {
+  IcBaselineStar,
+  WishlistIcon,
+  WishlistIconTwo,
+} from "../../images/Svg";
 import { useCart } from "../../context/Cart-context";
 import { useWishlist } from "../../context/Wishlist-context";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/Auth-context";
-import './Card.css'
+import "./Card.css";
 
-const Card = ({ item }) => {
+const Card = ({ item, changeDirection=false, className=''}) => {
   const {
     name,
     originalPrice,
@@ -51,9 +55,9 @@ const Card = ({ item }) => {
   };
 
   return (
-    <div className="card">
+    <div className={`card ${changeDirection ? 'h-card-styles' : ''} ${className}`}>
       <div className="card-img-wrapper">
-        <img className="product-card-img" src={imageSrc} alt={name} />
+        <img className={`product-card-img ${changeDirection ? 'h-card-img' : ''}`} src={imageSrc} alt={name} />
         {label && <span className="card-label">{label}</span>}
         <span className="card-rating">
           {rating} <IcBaselineStar />{" "}
@@ -73,11 +77,15 @@ const Card = ({ item }) => {
               : ""
           } `}
         >
-          <WishlistIconTwo />
+          {wishlistItems.find((cartItem) => cartItem.id === item.id) ? (
+            <WishlistIcon />
+          ) : (
+            <WishlistIconTwo />
+          )}
         </button>
       </div>
 
-      <div className="card-details">
+      <div className={`card-details ${changeDirection ? 'h-card-details' : ''}`}>
         <h4 className="card-title">{name}</h4>
         <p className="card-description">{description}</p>
         <div className="price-wrapper">
@@ -91,7 +99,6 @@ const Card = ({ item }) => {
           </span>
         </div>
 
-        <div className="crd-btn">
           <button
             className="card-btn"
             onClick={() =>
@@ -102,7 +109,6 @@ const Card = ({ item }) => {
               ? "Remove from Cart"
               : "Add to Cart"}
           </button>
-        </div>
       </div>
     </div>
   );

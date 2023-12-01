@@ -73,3 +73,17 @@ img {
 .color-red {
   color: var(--color-red);
 }
+
+
+.home-link {
+  color: var(--color-blue);
+}
+
+/* shared layouts */
+.common-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px auto;
+  gap: 30px;
+}

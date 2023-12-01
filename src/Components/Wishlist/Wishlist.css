@@ -1,5 +1,6 @@
-.spc-ar {
+.wishlist-wrapper {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 10px;
+    padding: 0 40px;
 }
