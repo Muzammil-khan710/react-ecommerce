@@ -1,5 +1,5 @@
 import React from 'react'
-import { Banner, FeaturedCategories, Layout } from '../Components/Allcomps'
+import { Banner, FeaturedCategories, FeaturedProducts, Layout } from '../Components/Allcomps'
 import { BannerImg } from '../images/ImageExp'
 
 const HomePage = () => {
@@ -12,6 +12,7 @@ const HomePage = () => {
         link="products"
       />
       <FeaturedCategories/>
+      <FeaturedProducts/>
     </Layout>
   )
 }
