@@ -8,8 +8,9 @@ import { useWishlist } from "../../context/Wishlist-context";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/Auth-context";
 import "./Card.css";
+import { CardPriceBlock } from "./CardPriceBlock";
 
-const Card = ({ item, changeDirection=false, className=''}) => {
+const Card = ({ item, changeDirection = false, className = "" }) => {
   const {
     name,
     originalPrice,
@@ -18,6 +19,7 @@ const Card = ({ item, changeDirection=false, className=''}) => {
     imageSrc,
     rating,
     description,
+    _id,
   } = item;
   const navigate = useNavigate();
 
@@ -35,42 +37,44 @@ const Card = ({ item, changeDirection=false, className=''}) => {
     removeFromWishlist,
   } = useWishlist();
 
-  const wishlistToggler = (item) => {
-    addToWishlist(item);
-    removeFromCart(item._id);
-  };
-
-  const cartToggler = (item) => {
-    addToCart(item);
-    removeFromWishlist(item._id);
-  };
-
-  const handleButtonClick = (data, item, removeFunc, toggleFunc) => {
+  const handleButtonClick = (data, item, removeFunc, addFunc) => {
     if (user) {
       const isItemInCart = data.some((cartItem) => cartItem.id === item.id);
-      isItemInCart ? removeFunc(item._id) : toggleFunc(item);
+      isItemInCart ? removeFunc(item._id) : addFunc(item);
     } else {
       navigate("/login");
     }
   };
 
+  const navigateToProduct = () => {
+    navigate(`/product/${_id}`)
+  }
+
   return (
-    <div className={`card ${changeDirection ? 'h-card-styles' : ''} ${className}`}>
+    <div
+    onClick={() => navigateToProduct()}
+      className={`card ${changeDirection ? "h-card-styles" : ""} ${className}`}
+    >
       <div className="card-img-wrapper">
-        <img className={`product-card-img ${changeDirection ? 'h-card-img' : ''}`} src={imageSrc} alt={name} />
+        <img
+          className={`product-card-img ${changeDirection ? "h-card-img" : ""}`}
+          src={imageSrc}
+          alt={name}
+        />
         {label && <span className="card-label">{label}</span>}
         <span className="card-rating">
           {rating} <IcBaselineStar />{" "}
         </span>
         <button
-          onClick={() =>
+          onClick={(e) => {
+            e.stopPropagation();
             handleButtonClick(
               wishlistItems,
               item,
               removeFromWishlist,
-              wishlistToggler
+              addToWishlist
             )
-          }
+          }}
           className={`card-wishlist-btn  ${
             wishlistItems.find((cartItem) => cartItem.id === item.id)
               ? "color-red"
@@ -85,30 +89,27 @@ const Card = ({ item, changeDirection=false, className=''}) => {
         </button>
       </div>
 
-      <div className={`card-details ${changeDirection ? 'h-card-details' : ''}`}>
+      <div
+        className={`card-details ${changeDirection ? "h-card-details" : ""}`}
+      >
         <h4 className="card-title">{name}</h4>
         <p className="card-description">{description}</p>
-        <div className="price-wrapper">
-          <span className="discount-price">₹{discountPrice}</span>
-          <span className="original-price"> ₹{originalPrice}</span>
-          <span className="offer-percentage">
-            {Math.round(
-              ((originalPrice - discountPrice) / originalPrice) * 100
-            )}
-            % off
-          </span>
-        </div>
-
-          <button
-            className="card-btn"
-            onClick={() =>
-              handleButtonClick(cartItems, item, removeFromCart, cartToggler)
-            }
-          >
-            {cartItems.find((cartItem) => cartItem.id === item.id)
-              ? "Remove from Cart"
-              : "Add to Cart"}
-          </button>
+        <CardPriceBlock
+          discountPrice={discountPrice}
+          originalPrice={originalPrice}
+        />
+        <button
+          className="card-btn"
+          onClick={(e) => {
+            e.stopPropagation();
+            handleButtonClick(cartItems, item, removeFromCart, addToCart)
+          }
+          }
+        >
+          {cartItems.find((cartItem) => cartItem.id === item.id)
+            ? "Remove from Cart"
+            : "Add to Cart"}
+        </button>
       </div>
     </div>
   );

@@ -18,6 +18,7 @@
   --color-white:#fff;
   --color-orange: #FF6B35;
   --color-red: red;
+  --color-green: #3bca3b;
 
   --font-sm: 0.875rem;
   --font-x-sm: 0.6rem;
@@ -74,9 +75,16 @@ img {
   color: var(--color-red);
 }
 
+.color-green {
+  color: var(--color-green);
+}
 
 .home-link {
   color: var(--color-blue);
+}
+
+.font-bold {
+  font-weight: 500;
 }
 
 /* shared layouts */

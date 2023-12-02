@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useWishlist } from "../../context/Wishlist-context";
 import "./Wishlist.css";
-import { Card } from "../Allcomps";
+import { Card } from "..";
 
 const Wishlist = () => {
   const {

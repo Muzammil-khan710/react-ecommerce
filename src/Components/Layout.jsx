@@ -1,11 +1,11 @@
 import React from "react";
-import { Footer, Navbar } from "./Allcomps";
+import { Footer, Navbar } from ".";
 
-const Layout = ({ children, className }) => {
+const Layout = ({ children, className = '' }) => {
   return (
     <React.Fragment>
       <Navbar />
-      <main className={`main ${className ? className : ''}`}>{children}</main>
+      <main className={`main ${className}`}>{children}</main>
       <Footer />
     </React.Fragment>
   );

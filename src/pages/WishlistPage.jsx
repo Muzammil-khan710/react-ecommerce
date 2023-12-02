@@ -1,5 +1,5 @@
 import React from 'react'
-import { Layout, Wishlist } from '../Components/Allcomps'
+import { Layout, Wishlist } from '../Components'
 
 const WishlistPage = () => {
   return (

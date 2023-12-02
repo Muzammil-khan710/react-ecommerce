@@ -4,7 +4,7 @@ import { useProducts } from "../../context/Product-context";
 import { sortPriceFilter } from "./../../reducer/FilterReducer";
 import { categoryFiltered } from "./../Filters";
 import { useFilter } from "../../context/Filter-context";
-import { Card, Filter } from "../Allcomps";
+import { Card, Filter } from "..";
 
 const Products = () => {
   const { products } = useProducts();

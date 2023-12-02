@@ -1,6 +1,6 @@
 import React from "react";
 import { useProducts } from "../../context/Product-context";
-import { Card } from "../Allcomps";
+import { Card } from "..";
 import "./FeaturedProducts.css"
 
 const FeaturedProducts = () => {

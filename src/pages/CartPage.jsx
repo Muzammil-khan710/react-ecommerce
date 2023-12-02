@@ -1,4 +1,4 @@
-import { Cart, Layout } from "../Components/Allcomps";
+import { Cart, Layout } from "../Components";
 
 const CartPage = () => {
   return (
