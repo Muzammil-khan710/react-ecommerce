@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useCart } from '../../context/Cart-context'
 import { useWishlist } from '../../context/Wishlist-context';
 import "./Cart.css"
+import { Card } from '../index';
 
 const Cart = () => {
 
@@ -42,24 +43,7 @@ const Cart = () => {
         <div className='cart-container'>
             <div className='left-cont'>
                 { cartItems.length > 0 && cartItems.map((item) => (
-                    <div className="card-cart" key={item._id}>
-                        <div className="horizontal-card">
-                        <img className="horizontal-card-img" src={item.imageSrc} alt={item.name}/>
-                        <div className="horizontal-card-contents">
-                        <h3>{item.name}</h3>
-                        <div className='qty-cont'>
-                            <button className='qty-btn green' onClick={() => incrementQty(item._id)}>+</button>
-                            {item.qty}
-                            <button className='qty-btn red' onClick={() => { item.qty > 1 ? decrementQty(item._id) : removeFromCart(item._id) } }>-</button>
-                        </div>
-                        <div className="crd-btn">
-                            <button className="btn outline-green" onClick={() => removeFromCart(item._id) }>Remove from cart</button>
-                            <button className="btn outline-red" onClick={() => {removeFromCart(item._id); addToWishlist(item) }}>Add to wishlist</button>
-                        </div>
-                        </div>
-                        </div>
-                    </div>
-                        
+                    <Card item={item} changeDirection={true} key={item._id}/>
                 ))
                 }
             </div>
