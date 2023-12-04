@@ -95,3 +95,7 @@ img {
   margin: 10px auto;
   gap: 30px;
 }
+
+.striken-text {
+  text-decoration: line-through;
+}

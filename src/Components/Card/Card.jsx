@@ -10,7 +10,7 @@ import { useAuth } from "../../context/Auth-context";
 import "./Card.css";
 import { CardPriceBlock } from "./CardPriceBlock";
 
-const Card = ({ item, changeDirection = false, className = "" }) => {
+const Card = ({ item, changeDirection = false, className = "" , quantityBlock}) => {
   const {
     name,
     originalPrice,
@@ -98,6 +98,7 @@ const Card = ({ item, changeDirection = false, className = "" }) => {
           discountPrice={discountPrice}
           originalPrice={originalPrice}
         />
+        {quantityBlock}
         <button
           className="card-btn"
           onClick={(e) => {

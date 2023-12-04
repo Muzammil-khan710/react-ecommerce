@@ -22,8 +22,6 @@ const Products = () => {
     state.sortBy
   );
 
-  console.log(PriceWishFilter)
-
   return (
     <React.Fragment>
       <button className="toggle-resp" onClick={() => setShowFilter(+true)}>

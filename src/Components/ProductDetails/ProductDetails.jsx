@@ -24,10 +24,12 @@ const ProductDetails = ({ productId }) => {
   }, [products, productId]);
 
   const navigate = useNavigate();
-  const isItemInCart = cartItems.find(
+
+  const isItemInCart = cartItems.some(
     (cartItem) => cartItem.id === singleProduct.id
   );
-  const isItemInWishlist = wishlistItems.find(
+  
+  const isItemInWishlist = wishlistItems.some(
     (cartItem) => cartItem.id === singleProduct.id
   );
   const cartBtnHandler = () => {
