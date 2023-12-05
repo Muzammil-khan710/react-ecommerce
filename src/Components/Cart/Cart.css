@@ -35,6 +35,7 @@
 .cart-container {
     display: flex;
     justify-content: space-between;
+    margin: 10px auto;
 }
 
 .left-cont {
@@ -69,12 +70,19 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    background-color: var(--bg-primary);
+    color: var(--color-white)
 }
 
 .qty-cont {
     display: flex;
     gap: 1rem;
     justify-content: center;
+}
+
+.cart-empty-heading {
+    width: 100%;
+    text-align: center;
 }
 
 @media screen and (max-width : 950px) {

@@ -29,21 +29,27 @@ const Navbar = () => {
       </Link>
       <div className="icon-container">
         <Link className="link-product" to="/products">
-          <span>Products</span>
+          <span className="link-product-title">Products</span>
         </Link>
         <Link className="link-product" to="/cart">
-          <span>Cart</span>
+          <span className="link-product-title">Cart</span>
+          <div className="link-product-block">
+
           <ShoppingCartIcon />
           {cartItems.length > 0 && (
-            <span className="list-badge">{cartItems.length} </span>
-          )}{" "}
+            <span className="link-product-val">{cartItems.length} </span>
+            )}{" "}
+            </div>
         </Link>
         <Link className="link-product" to="/wishlist">
-          <span>Wishlist</span>
+          <span className="link-product-title">Wishlist</span>
+
+          <div className="link-product-block">
           <WishlistIcon />
           {wishlistItems.length > 0 && (
-            <span className="list-badge">{wishlistItems.length} </span>
+            <span className="link-product-val">{wishlistItems.length} </span>
           )}{" "}
+          </div>
         </Link>
 
         {user ? (

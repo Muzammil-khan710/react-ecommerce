@@ -12,6 +12,24 @@
     color: var(--color-primary);
 }
 
+.link-product-block {
+    display: block;
+    background: var(--color0-red);
+    border-radius: 100%;
+    text-align: center;
+    height: 1.2rem;
+    width: 1.2rem;
+}
+
+.link-product-val {
+    transform: translate(15px, -40px);
+    display: block;
+    background: var(--color-red);
+    border-radius: 100%;
+    text-align: center;
+    color: var(--color-white);
+}
+
 .icon-container {
     display: flex;
     gap: 20px;
@@ -25,21 +43,17 @@
     color: var(--color-primary);
 }
 
-.link-product > span {
-    display: block;
-}
-
 .brand-name:hover, .link-product:hover, .nav-btn:hover {
     color: var(--color-light-gray);
 }
 
-@media screen and (max-width:600px) {
-    .link-product > span {
-        display: none;
-    }
-    
+@media screen and (max-width:600px) {    
     .brand-name {
         font-size: 24px;
+    }
+
+    .link-product-title {
+        display: none;
     }
 
 }

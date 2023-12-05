@@ -14,7 +14,11 @@ const ProductDetails = ({ productId }) => {
     cartState: { cartItems },
   } = useCart();
 
-  const { addToWishlist, removeFromWishlist, wishlistState: { wishlistItems } } =  useWishlist()
+  const {
+    addToWishlist,
+    removeFromWishlist,
+    wishlistState: { wishlistItems },
+  } = useWishlist();
 
   const [singleProduct, setSingleProduct] = useState(null);
 
@@ -25,21 +29,20 @@ const ProductDetails = ({ productId }) => {
 
   const navigate = useNavigate();
 
-  const isItemInCart = cartItems.some(
-    (cartItem) => cartItem.id === singleProduct.id
-  );
+  const isItemInCart = () => cartItems.length > 0 && cartItems.some(cartItem => cartItem.id === singleProduct.id);
+
+  const isItemInWishlist = () => wishlistItems.length > 0 && wishlistItems.some(cartItem => cartItem.id === singleProduct.id);
   
-  const isItemInWishlist = wishlistItems.some(
-    (cartItem) => cartItem.id === singleProduct.id
-  );
   const cartBtnHandler = () => {
-    isItemInCart ? navigate("/cart") : addToCart(singleProduct);
+    isItemInCart() ? navigate("/cart") : addToCart(singleProduct);
   };
 
   const wishlistBtnHandler = () => {
-    isItemInWishlist ? removeFromWishlist(singleProduct._id) : addToWishlist(singleProduct)
-  }
- 
+    isItemInWishlist()
+      ? removeFromWishlist(singleProduct._id)
+      : addToWishlist(singleProduct);
+  };
+
   useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -60,12 +63,16 @@ const ProductDetails = ({ productId }) => {
             <button
               onClick={() => wishlistBtnHandler()}
               className={`card-wishlist-btn  ${
-                wishlistItems.find((cartItem) => cartItem.id === singleProduct.id)
+                wishlistItems.find(
+                  (cartItem) => cartItem.id === singleProduct.id
+                )
                   ? "color-red"
                   : ""
               } `}
             >
-              {wishlistItems.find((cartItem) => cartItem.id === singleProduct.id) ? (
+              {wishlistItems.find(
+                (cartItem) => cartItem.id === singleProduct.id
+              ) ? (
                 <WishlistIcon />
               ) : (
                 <WishlistIconTwo />
@@ -102,7 +109,7 @@ const ProductDetails = ({ productId }) => {
               className="product-details-btn"
               onClick={() => cartBtnHandler()}
             >
-              {isItemInCart ? "Go to cart" : "Add to cart"}
+              {isItemInCart() ? "Go to cart" : "Add to cart"}
             </button>
           </div>
         </div>
