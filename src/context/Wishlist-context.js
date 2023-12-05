@@ -1,6 +1,7 @@
 import axios from "axios";
 import { createContext, useContext, useReducer } from "react";
 import { WishlistReducer } from "../reducer/WishlistReducer";
+import toast from "react-hot-toast";
 
 const WishlistContext = createContext()
 
@@ -26,8 +27,10 @@ const WishlistProvider = ({children}) => {
                 type: "ADD_TO_WISHLIST",
                 payload : data.wishlist
             }) 
+            toast.success("Product added to wishlist")
         } catch (err) {
             console.log(err)
+            toast.error("Error occured while adding product to wishlist")
         }
 
     }
@@ -46,8 +49,10 @@ const WishlistProvider = ({children}) => {
                 type: "REMOVE_FROM_WISHLIST",
                 payload : data.wishlist
             }) 
+            toast.success("Product removed from wishlist")
         } catch (err) {
             console.log(err)
+            toast.error("Error occured while removing product from wishlist")
         }
 
     }
