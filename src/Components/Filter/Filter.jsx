@@ -1,31 +1,40 @@
-import React from 'react'
+import React from 'react';
 import { useFilter } from "../../context/Filter-context";
 import "./Filter.css";
+import { CloseSvg } from '../../images/Svg';
 
 const Filter = () => {
-
-  const { state, dispatch, setShowFilter, showFilter } = useFilter()
+  const { state, dispatch, setShowFilter, showFilter } = useFilter();
 
   return (
     <>
-         <section className= { showFilter ? "left-container" : "left-container left-container-resp"}>
-          <button className="resp-close-btn" onClick={() => setShowFilter(+false)}>close</button>
-          <h2>Filters</h2>
-          <button className="filter-btn" onClick={() => dispatch({type :"CLEAR_FILTER"})} >Clear All</button>
+      <aside className={showFilter ? "filter-container" : "filter-container filter-container-resp"}>
+        <button className="resp-close-btn" onClick={() => setShowFilter(+false)}><CloseSvg/></button>
+        <h2>Filters</h2>
+        <button className="card-btn filter-btn" onClick={() => dispatch({ type: "CLEAR_FILTER" })}>Clear All</button>
 
-          <div className="checkbox-container">
-            <span><input className='category-input' type="radio"  checked={ state.sortBy === "LOW_TO_HIGH"} onChange={() => dispatch({ type: "LOW_TO_HIGH"})}/>Price: Low to high </span>
-            <span><input className='category-input' type="radio"  checked={ state.sortBy === "HIGH_TO_LOW"} onChange={() => dispatch({ type: "HIGH_TO_LOW"})}/>Price: High to low</span>         
+        <div className="checkbox-container">
+          <h4>Sort By</h4>
+          <label><input type="radio" checked={state.sortBy === "PRICE_LOW_TO_HIGH"} onChange={() => dispatch({ type: "PRICE_LOW_TO_HIGH" })} />Price: Low to high</label>
+          <label><input type="radio" checked={state.sortBy === "PRICE_HIGH_TO_LOW"} onChange={() => dispatch({ type: "PRICE_HIGH_TO_LOW" })} />Price: High to low</label>
 
-          <h3>By category</h3>  
-            <span><input className='category-input' type="checkbox" checked={state.Analog} onChange={() => dispatch({type: "ANALOG"})} />Analog</span>
-            <span><input className='category-input' type="checkbox" checked={state.SmartWatch} onChange={() => dispatch({type: "SMARTWATCH"})}/>Smart</span>
-            <span><input className='category-input' type="checkbox" checked={state.Automatic} onChange={() => dispatch({type: "AUTOMATIC"})}/>Automatic</span>
-            <span><input className='category-input' type="checkbox" checked={state.Chronograph} onChange={() => dispatch({type: "CHRONOGRAPH"})}/>Chronograph</span>
-            </div>
-        </section>
+          <label><input type="radio" checked={state.sortBy === "RATING_LOW_TO_HIGH"} onChange={() => dispatch({ type: "RATING_LOW_TO_HIGH" })} />Rating: Low to high</label>
+          <label><input type="radio" checked={state.sortBy === "RATING_HIGH_TO_LOW"} onChange={() => dispatch({ type: "RATING_HIGH_TO_LOW" })} />Rating: High to low</label>
+          
+          <h4>Filter By category</h4>
+          <label><input type="checkbox" checked={state.Analog} onChange={() => dispatch({ type: "ANALOG" })} />Analog Watch</label>
+          <label><input type="checkbox" checked={state.SmartWatch} onChange={() => dispatch({ type: "SMARTWATCH" })} />Smart Watch</label>
+          <label><input type="checkbox" checked={state.Chronograph} onChange={() => dispatch({ type: "CHRONOGRAPH" })} />Chronograph Watch</label>
+          
+          <h4>Filter By brand</h4>
+          <label><input type="checkbox" checked={state.Fossil} onChange={() => dispatch({ type: "FOSSIL" })} />Fossil</label>
+          <label><input type="checkbox" checked={state.Casio} onChange={() => dispatch({ type: "CASIO" })} />Casio</label>
+          <label><input type="checkbox" checked={state.Police} onChange={() => dispatch({ type: "POLICE" })} />Police</label>
+          <label><input type="checkbox" checked={state.Amazfit} onChange={() => dispatch({ type: "AMAZFIT" })} />Amazfit</label>
+        </div>
+      </aside>
     </>
-  )
-}
+  );
+};
 
-export { Filter }
+export { Filter };

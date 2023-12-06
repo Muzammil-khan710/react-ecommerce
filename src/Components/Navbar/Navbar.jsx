@@ -36,7 +36,7 @@ const Navbar = () => {
           <div className="link-product-block">
 
           <ShoppingCartIcon />
-          {cartItems.length > 0 && (
+          {user && cartItems.length > 0 && (
             <span className="link-product-val">{cartItems.length} </span>
             )}{" "}
             </div>
@@ -46,7 +46,7 @@ const Navbar = () => {
 
           <div className="link-product-block">
           <WishlistIcon />
-          {wishlistItems.length > 0 && (
+          {user && wishlistItems.length > 0 && (
             <span className="link-product-val">{wishlistItems.length} </span>
           )}{" "}
           </div>

@@ -48,4 +48,16 @@ const WishlistIconTwo = (props) => {
 }
 
 
-export { ShoppingCartIcon , WishlistIcon , UserProfile , IcBaselineStar, Login, Logout, WishlistIconTwo }
+const FilterList = (props) => {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="1.2rem" height="1.2rem" viewBox="0 0 24 24" {...props}><path fill="currentColor" d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"></path></svg>
+  )
+}
+
+
+const CloseSvg = (props) => {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" {...props}><path fill="currentColor" d="M6.4 19L5 17.6l5.6-5.6L5 6.4L6.4 5l5.6 5.6L17.6 5L19 6.4L13.4 12l5.6 5.6l-1.4 1.4l-5.6-5.6L6.4 19Z"></path></svg>
+  )
+}
+export { ShoppingCartIcon , WishlistIcon , UserProfile , IcBaselineStar, Login, Logout, WishlistIconTwo, FilterList, CloseSvg }

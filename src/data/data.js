@@ -1,4 +1,4 @@
-import { AmazfitGtr, CasioBlue, PoliceBlack } from "../images/ImageExp"
+import { AmazfitGtr, CasioBlue, PoliceBlack } from "../images"
 
 export const FeaturedCategoriesData = [
     {

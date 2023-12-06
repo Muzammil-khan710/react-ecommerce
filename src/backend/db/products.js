@@ -2,7 +2,7 @@
  * Product Database can be added here.
  * You can add products of your wish with different attributes
  * */
- import {AmazfitGtr, AmazfitGts, CasioBlue, CasioBrown, CasioWhite, FossilBlack, PoliceBlue, FossilGreen, FossilBlue, PoliceBlack, PoliceGolden} from "../../images/ImageExp"
+ import {AmazfitGtr, AmazfitGts, CasioBlue, CasioBrown, CasioWhite, FossilBlack, PoliceBlue, FossilGreen, FossilBlue, PoliceBlack, PoliceGolden} from "../../images/index"
 
 
 export const products = [

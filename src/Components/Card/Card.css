@@ -4,6 +4,7 @@
   border: 1px solid var(--color-primary);
   border-radius: 5px;
   cursor: pointer;
+  min-width: 260px;
 }
 
 .card-label {

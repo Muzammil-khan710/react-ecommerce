@@ -41,6 +41,7 @@ const Cart = () => {
         {cartItems.length > 0 ? (
           <>
             <div className="common-card-container">
+              <h2>Your Cart</h2>
               {cartItems.length > 0 &&
                 cartItems.map((item) => (
                   <Card
@@ -96,7 +97,7 @@ const Cart = () => {
               </div>
               <div className="side-bar-text">
                 Delivery charges
-                <span className="side-bar-values striken-text">
+                <span className="side-bar-values">
                   {" "}
                   {cartTotal.total <= 10000 ? "1000" : "0"}{" "}
                 </span>{" "}

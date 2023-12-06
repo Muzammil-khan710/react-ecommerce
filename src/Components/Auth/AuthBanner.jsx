@@ -1,5 +1,5 @@
 import React from 'react'
-import { AuthImg } from '../../images/ImageExp'
+import { AuthImg } from '../../images'
 
 const AuthBanner = () => {
   return (
