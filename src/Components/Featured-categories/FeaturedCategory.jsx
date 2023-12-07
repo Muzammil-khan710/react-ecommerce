@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useFilter } from "../../context/Filter-context";
-import './FeaturedCategory.css'
+import './featured-category.css'
 
 const FeaturedCategory = ({ image, title, category }) => {
   const { dispatch } = useFilter();

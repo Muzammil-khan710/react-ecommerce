@@ -1,13 +1,13 @@
-import "./Product.css";
 import React from "react";
+import { Card, Filter, Layout } from "../../Components";
 import { useProducts } from "../../context/Product-context";
-import { sortRatingAndPrice } from "./../../reducer/FilterReducer";
-import { categoryFiltered } from "./../Filters";
 import { useFilter } from "../../context/Filter-context";
-import { Card, Filter } from "..";
-import { FilterList } from "../../images/Svg";
+import { sortRatingAndPrice  } from "../../reducer/FilterReducer";
+import { FilterListIcon } from "../../images/Svg";
+import { categoryFiltered } from "../../utils/Filters";
+import "./products.css"
 
-const Products = () => {
+const ProductsPage = () => {
   const { products } = useProducts();
 
   const { state, setShowFilter } = useFilter();
@@ -24,9 +24,9 @@ const Products = () => {
   );
 
   return (
-    <React.Fragment>
+    <Layout>
       <button className="toggle-resp" onClick={() => setShowFilter(+true)}>
-        <FilterList/>
+        <FilterListIcon/>
       </button>
       <div className="product-page-content">
         <Filter />
@@ -40,8 +40,8 @@ const Products = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
+    </Layout>
   );
 };
 
-export { Products };
+export { ProductsPage };

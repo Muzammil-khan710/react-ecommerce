@@ -6,10 +6,10 @@ import { useWishlist } from "../../context/Wishlist-context";
 import {
   ShoppingCartIcon,
   WishlistIcon,
-  Login,
-  Logout,
+  LoginIcon,
+  LogoutIcon,
 } from "../../images/Svg";
-import "./Navbar.css";
+import "./navbar.css";
 
 const Navbar = () => {
   const {
@@ -55,12 +55,12 @@ const Navbar = () => {
         {user ? (
           <Link className="nav-btn" onClick={logoutFunc} to="/login">
             <span>Logout</span>
-            <Login />
+            <LoginIcon />
           </Link>
         ) : (
           <Link className="nav-btn" to="/login">
             <span>Login</span>
-            <Logout />
+            <LogoutIcon />
           </Link>
         )}
       </div>

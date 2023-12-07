@@ -27,14 +27,14 @@ const IcBaselineStar = (props) => {
 
 
 
-const Login = (props) => {
+const LoginIcon = (props) => {
   return (
     <svg className='svg' width="1.2rem" height="1.2rem" viewBox="0 0 24 24" {...props}><path fill="currentColor" d="M5 5h7V3H3v18h9v-2H5z"></path><path fill="currentColor" d="m21 12l-4-4v3H9v2h8v3z"></path></svg>
   )
 }
 
 
-const Logout = (props) => {
+const LogoutIcon = (props) => {
   return (
     <svg className='svg' width="1.2rem" height="1.2rem" viewBox="0 0 24 24" {...props}><path fill="currentColor" d="M11 7L9.6 8.4l2.6 2.6H2v2h10.2l-2.6 2.6L11 17l5-5l-5-5zm9 12h-8v2h10V3H12v2h8v14z"></path></svg>
   )
@@ -48,16 +48,16 @@ const WishlistIconTwo = (props) => {
 }
 
 
-const FilterList = (props) => {
+const FilterListIcon = (props) => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="1.2rem" height="1.2rem" viewBox="0 0 24 24" {...props}><path fill="currentColor" d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"></path></svg>
   )
 }
 
 
-const CloseSvg = (props) => {
+const CloseSvgIcon = (props) => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" {...props}><path fill="currentColor" d="M6.4 19L5 17.6l5.6-5.6L5 6.4L6.4 5l5.6 5.6L17.6 5L19 6.4L13.4 12l5.6 5.6l-1.4 1.4l-5.6-5.6L6.4 19Z"></path></svg>
   )
 }
-export { ShoppingCartIcon , WishlistIcon , UserProfile , IcBaselineStar, Login, Logout, WishlistIconTwo, FilterList, CloseSvg }
+export { ShoppingCartIcon , WishlistIcon , UserProfile , IcBaselineStar, LoginIcon, LogoutIcon, WishlistIconTwo, FilterListIcon, CloseSvgIcon }

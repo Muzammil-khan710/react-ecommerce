@@ -1,5 +1,6 @@
 import React from 'react'
 import { AuthImg } from '../../images'
+import "./auth-banner.css"
 
 const AuthBanner = () => {
   return (
@@ -9,4 +10,4 @@ const AuthBanner = () => {
   )
 }
 
-export default AuthBanner
+export { AuthBanner }

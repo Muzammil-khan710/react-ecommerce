@@ -56,18 +56,6 @@
     font-weight: 600;
 }
 
-.auth-img {
-    min-height: 380px;
-    max-width: 300px;
-    height: 100%;
-}
-
 .auth-link {
     color: var(--color-blue);
-}
-
-@media screen and (max-width:768px) {
-    .auth-img-box {
-        display: none;
-    }
 }

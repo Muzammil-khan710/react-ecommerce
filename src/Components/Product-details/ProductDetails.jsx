@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useProducts } from "../../context/Product-context";
 import { CardPriceBlock } from "../index";
-import "./ProductDetails.css";
 import { useCart } from "../../context/Cart-context";
 import { useNavigate } from "react-router-dom";
 import { useWishlist } from "../../context/Wishlist-context";
 import { WishlistIcon, WishlistIconTwo } from "../../images/Svg";
+import "./product-details.css"
 
 const ProductDetails = ({ productId }) => {
   const { products } = useProducts();
@@ -120,4 +120,4 @@ const ProductDetails = ({ productId }) => {
   );
 };
 
-export default ProductDetails;
+export { ProductDetails }

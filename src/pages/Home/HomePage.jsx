@@ -1,6 +1,6 @@
 import React from 'react'
-import { Banner, FeaturedCategories, FeaturedProducts, Layout } from '../Components'
-import { BannerImg } from '../images'
+import { Banner, FeaturedCategories, FeaturedProducts, Layout } from '../../Components'
+import { BannerImg } from '../../images'
 
 const HomePage = () => {
   return (

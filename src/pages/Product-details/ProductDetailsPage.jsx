@@ -1,9 +1,8 @@
 import React from "react";
-import { FeaturedProducts, Layout } from "../Components";
+import { FeaturedProducts, Layout, ProductDetails } from "../../Components";
 import { useParams } from "react-router-dom";
-import ProductDetails from "../Components/ProductDetails/ProductDetails";
 
-const SingleProductPage = () => {
+const ProductDetailsPage = () => {
   const {id}= useParams();
 
   return (
@@ -14,4 +13,4 @@ const SingleProductPage = () => {
   );
 };
 
-export default SingleProductPage;
+export { ProductDetailsPage }

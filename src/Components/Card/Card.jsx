@@ -7,7 +7,7 @@ import { useCart } from "../../context/Cart-context";
 import { useWishlist } from "../../context/Wishlist-context";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/Auth-context";
-import "./Card.css";
+import "./card.css";
 import { CardPriceBlock } from "./CardPriceBlock";
 
 const Card = ({ item, changeDirection = false, className = "" , quantityBlock}) => {

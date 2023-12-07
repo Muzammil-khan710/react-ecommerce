@@ -1,7 +1,7 @@
 import React from 'react';
 import { useFilter } from "../../context/Filter-context";
-import "./Filter.css";
-import { CloseSvg } from '../../images/Svg';
+import "./filter.css";
+import { CloseSvgIcon } from '../../images/Svg';
 
 const Filter = () => {
   const { state, dispatch, setShowFilter, showFilter } = useFilter();
@@ -9,7 +9,7 @@ const Filter = () => {
   return (
     <>
       <aside className={showFilter ? "filter-container" : "filter-container filter-container-resp"}>
-        <button className="resp-close-btn" onClick={() => setShowFilter(+false)}><CloseSvg/></button>
+        <button className="resp-close-btn" onClick={() => setShowFilter(+false)}><CloseSvgIcon/></button>
         <h2>Filters</h2>
         <button className="card-btn filter-btn" onClick={() => dispatch({ type: "CLEAR_FILTER" })}>Clear All</button>
 

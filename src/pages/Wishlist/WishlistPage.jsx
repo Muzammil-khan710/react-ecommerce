@@ -1,16 +1,16 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { useWishlist } from "../../context/Wishlist-context";
-import "./Wishlist.css";
-import { Card } from "..";
+import React from 'react'
+import { Card, Layout } from '../../Components'
+import { useWishlist } from '../../context/Wishlist-context';
+import { Link } from 'react-router-dom';
+import './wishlist.css'
 
-const Wishlist = () => {
+const WishlistPage = () => {
   const {
     wishlistState: { wishlistItems },
   } = useWishlist();
 
   return (
-    <>
+    <Layout>
       <section className="common-card-container">
         {wishlistItems.length > 0 ? (
           <>
@@ -22,7 +22,7 @@ const Wishlist = () => {
             </div>
           </>
         ) : (
-          <h1>
+          <h1 className="common-empty-heading">
             Your wishlist is empty ! Please add items from{" "}
             <Link to="/products" className="home-link">
               Products
@@ -30,8 +30,8 @@ const Wishlist = () => {
           </h1>
         )}
       </section>
-    </>
+    </Layout>
   );
-};
+}
 
-export { Wishlist };
+export { WishlistPage }

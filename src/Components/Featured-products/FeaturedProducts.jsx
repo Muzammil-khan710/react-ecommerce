@@ -1,7 +1,7 @@
 import React from "react";
 import { useProducts } from "../../context/Product-context";
 import { Card } from "..";
-import "./FeaturedProducts.css"
+import "./featured-products.css"
 
 const FeaturedProducts = () => {
   const { featuredProducts } = useProducts();
