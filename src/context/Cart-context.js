@@ -1,6 +1,7 @@
 import axios from "axios";
 import { createContext, useContext, useReducer } from "react";
 import { CartReducer } from "../reducer/CartReducer";
+import toast from "react-hot-toast";
 
 const CartContext = createContext()
 
@@ -27,8 +28,10 @@ const CartProvider = ({children}) => {
                 type : "ADD_TO_CART",
                 payload : data.cart
             })
+            toast.success("Product added to cart")
         } catch (err) {
             console.log(err)
+            toast.error("Error occured while adding product to cart")
         }
     }
 
@@ -46,8 +49,10 @@ const CartProvider = ({children}) => {
                 type : "REMOVE_FROM_CART",
                 payload : data.cart
             })
+            toast.success("Product removed from cart")
         } catch (err) {
             console.log(err)
+            toast.error("Error occured while removing product from cart")
         }
     }
 

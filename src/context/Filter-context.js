@@ -1,27 +1,31 @@
 import { useState, createContext, useContext, useReducer } from "react";
-import { reducer } from './../reducer/FilterReducer';
+import { reducer } from "./../reducer/FilterReducer";
 
-const FilterContext = createContext()
+const FilterContext = createContext();
 
-const useFilter = () => useContext(FilterContext)
+const useFilter = () => useContext(FilterContext);
 
 const FilterProvider = ({ children }) => {
-
-  const [showFilter, setShowFilter] = useState(false)
+  const [showFilter, setShowFilter] = useState(false);
 
   const [state, dispatch] = useReducer(reducer, {
-    sortBy: ""  ,
+    sortBy: null,
     Analog: false,
-    Automatic: false,
     Chronograph: false,
     SmartWatch: false,
-});
+    Casio:false,
+    Amazfit:false,
+    Police:false,
+    Fossil:false
+  });
 
-    return (
-        <FilterContext.Provider value={{state, dispatch, showFilter, setShowFilter}}>
-            {children}
-        </FilterContext.Provider>
-    )
-}
+  return (
+    <FilterContext.Provider
+      value={{ state, dispatch, showFilter, setShowFilter }}
+    >
+      {children}
+    </FilterContext.Provider>
+  );
+};
 
-export { useFilter, FilterProvider }
+export { useFilter, FilterProvider };

@@ -1,21 +1,20 @@
-import "./App.css";
+import "./main.css";
 import { Routes, Route } from "react-router-dom"
-import Mockman from "mockman-js";
 import { Authroute } from './Components/Authroute';
 import { Privateroute } from "./Components/Privateroute";
-import { CartPage, HomePage, LoginPage, ProductsPage, SignupPage, WishlistPage } from "./pages/index";
+import { CartPage, HomePage, LoginPage, ProductDetailsPage, ProductsPage, SignupPage, WishlistPage } from "./pages/index";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
-    <div className="App">
+    <>
       <Routes>
         <Route path="/" element={<HomePage/>} />
-        <Route path="/mockman" element={<div className="MockAPI"><Mockman /></div>}/>
         <Route path="/products" element={<ProductsPage/>} />
-
+        <Route path="/product/:id" element={<ProductDetailsPage/>} />
         <Route element={<Authroute/>}>
-          <Route path="/Login" element={<LoginPage/>} />
-          <Route path="/Signup" element={<SignupPage/>} />
+          <Route path="/login" element={<LoginPage/>} />
+          <Route path="/signup" element={<SignupPage/>} />
         </Route>
 
         <Route element={<Privateroute/>}>
@@ -23,7 +22,8 @@ function App() {
           <Route path="/wishlist" element={<WishlistPage/>} />
         </Route>
       </Routes>
-    </div>
+      <Toaster/>
+      </>
   );
 }
 

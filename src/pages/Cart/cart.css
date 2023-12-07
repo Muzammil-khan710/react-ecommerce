@@ -1,0 +1,14 @@
+.cart-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    gap: 20px;
+}
+
+
+@media screen and (max-width : 950px) {
+    .cart-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}

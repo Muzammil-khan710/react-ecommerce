@@ -1,0 +1,55 @@
+.banner-container {
+    position: relative;
+    backdrop-filter: blur(1.5px);
+}
+
+.banner-img {
+    max-height:600px;
+    width: 100%;
+}
+
+.banner-details {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    backdrop-filter: blur(3px);
+    height: 95%;
+}
+
+.banner-title {
+    font-size: 48px;
+    line-height: 150%;
+    color: var(--color-primary);
+}
+
+.banner-link {
+    padding: 15px 40px;
+    border-radius: 30px;
+    background-color: var(--color-blue);
+    color: var(--color-white);
+}
+
+.banner-link:hover {
+    background-color: var(--color-blue-dark);
+}
+
+
+@media screen and (max-width:768px) {
+    .banner-title {
+        font-size: 36px;
+    }
+    
+}
+
+@media screen and (max-width:600px) {
+    .banner-title {
+        font-size: 20px;
+    }
+    
+}
