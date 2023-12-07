@@ -2,7 +2,6 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
-    align-items: center;
     margin: 0 auto;
     place-items: center;
     max-width: 1050px;
@@ -56,16 +55,13 @@
     .product-details-wrapper {
         grid-template-columns: 1fr;
         gap: 20px;
-    }
-
-    .product-details-content {
         padding: 0 40px;
     }
     
 }
 
 @media screen and (max-width:500px) {
-    .product-details-content {
+    .product-details-wrapper {
         padding: 0 20px;
     }
 

@@ -95,3 +95,8 @@ img {
   margin: 10px auto;
   gap: 30px;
 }
+
+.common-empty-heading {
+  width: 100%;
+  text-align: center;
+}
